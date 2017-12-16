@@ -130,6 +130,9 @@ img {
 .navbar-custom .nav li a {
   font-weight: 800;
   color: #404040;
+  {% if site.navbar-txt-col %}
+  color: {{ site.navbar-txt-col }};
+  {% endif %}
 }
 
 .navbar-custom .navbar-brand:hover,
