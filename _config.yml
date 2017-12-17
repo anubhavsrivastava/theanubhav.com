@@ -15,12 +15,14 @@ baseurl: ""
 
 # Name of website
 title: theAnubhav
-
 # Short description of your site
 description: Anubhav Srivastava's Personal Blog!
 
 # --- Navigation bar options --- #
 
+
+#should show title on navigation
+show_title: false
 # List of links in the navigation bar
 navbar-links:
   About Me: "http://about.theanubhav.com"
@@ -32,11 +34,11 @@ navbar-links:
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/avatar-icon.png"
+avatar: "/img/avatars/avatar-icon.png"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
-# title-img: /path/to/image
+# title-img: "/img/avatars/avatar-icon.png"
 
 # --- Background colour/image options --- #
 
@@ -58,22 +60,22 @@ avatar: "/img/avatar-icon.png"
 author:
   name: Anubhav Srivastava
   email: "anubhav.srivastava00@gmail.com"
-  facebook: theanubhav  # eg. daattali
-  github: anubhavsrivastava    # eg. daattali
-  twitter: onlyanubhav   # eg. daattali
-  reddit: yourname    # eg. daattali
-  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
-  linkedin: yourname  # eg. daattali
-  xing: yourname      # eg. daattali
-  stackoverflow: 2846906/theanubhav  # eg. "3943160/daattali"
-  snapchat: yourname  # eg. daattali
-  instagram: yourname # eg. daattali
-  youtube: yourlink   # eg. user/daattali or channel/daattali
-  spotify: yourname   # eg. daattali
+  facebook: theanubhav  # eg. theAnubhav
+  github: anubhavsrivastava    # eg. theAnubhav
+  twitter: onlyanubhav   # eg. theAnubhav
+  reddit: yourname    # eg. theAnubhav
+  google-plus: +yourname   # eg. +Anubhav or 109424658772469020925
+  linkedin: yourname  # eg. theAnubhav
+  xing: yourname      # eg. theAnubhav
+  stackoverflow: 2846906/theanubhav  # eg. "2846906/theAnubhav"
+  snapchat: yourname  # eg. theAnubhav
+  instagram: yourname # eg. theAnubhav
+  youtube: yourlink   # eg. user/theAnubhav or channel/theAnubhav
+  spotify: yourname   # eg. theAnubhav
   telephone: yourphone   # eg. +14159998888
-  steam: yourname     # eg. daattali
-  twitch: yourname    # eg. daattali
-  yelp: yourname      # eg. daattali
+  steam: yourname     # eg. theAnubhav
+  twitch: yourname    # eg. theAnubhav
+  yelp: yourname      # eg. theAnubhav
 
 # Select which links to show in the footer
 footer-links-active:
@@ -109,7 +111,7 @@ url-pretty: "theAnubhav.com"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-#disqus: ""
+disqus: ""
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
@@ -150,6 +152,7 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      avatar: "/img/avatars/avatar-post.png"
   -
     scope:
       path: "" # all files
@@ -176,6 +179,7 @@ prose:
   rooturl: '_posts'
   media: 'img'
   ignore:
+    - 404.md
     - 404.html
     - LICENSE
     - feed.xml

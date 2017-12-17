@@ -9,9 +9,15 @@
       </button>
       {% if site.title-img %}
         <a class="navbar-brand navbar-brand-logo" href="{{ site.url }}"><img src="{{ site.title-img }}"/></a>
-      {% else %}
+      {% elsif site.show_title %}
         <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
       {% endif %}
+
+      {% unless site.title-img %}
+      <div class="nav-short-home hide">
+        <a class="navbar-brand navbar-brand-logo" href="{{ site.url }}"><img src="{{ site.avatar }}"/></a>
+      </div>
+      {% endunless  %}
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -37,7 +43,15 @@
       </ul>
     </div>
 
-	{% if page.image and (layout.show-avatar or page.show-avatar) %}
+	{% if page.avatar and (layout.show-avatar or page.show-avatar) %}
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="{{ site.url }} ">
+	      <img class="avatar-img" src="{{ page.avatar | prepend: site.baseurl | replace: '//', '/' }}" />
+		</a>
+	  </div>
+	</div>
+	{% elsif page.image and (layout.show-avatar or page.show-avatar) %}
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
 	    <a href="{{ site.url }} ">
@@ -45,7 +59,7 @@
 		</a>
 	  </div>
 	</div>
-	{% elsif site.avatar and (layout.show-avatar or page.show-avatar) %}
+  {% elsif site.avatar and (layout.show-avatar or page.show-avatar) %}
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
 	    <a href="{{ site.url }} ">
