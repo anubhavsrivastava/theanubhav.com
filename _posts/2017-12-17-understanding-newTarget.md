@@ -163,6 +163,7 @@ function WrapperConstructor(type) {
 `new.target` is an implicit parameter that all functions have. It is to constructor calls what `this` is to method calls. As mentioned, if used with `new` operator, it returns the constructor function else it is undefined.
 
 Here as typical solutions to use cases that we discussed earlier
+
 **Case 1 solution: (using `newTarget`)**
 {% highlight javascript linenos %}
 function Animal(type) {
