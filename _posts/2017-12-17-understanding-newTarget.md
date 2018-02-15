@@ -3,7 +3,7 @@ layout: post
 title: Understanding meta-property - newTarget
 subtitle: Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)
 avatar: /img/avatars/avatar-js.png
-gist: ECMAScript 2015 has introduced a new meta-property or expression known as `new.target` (or `newTarget`);  'new' keyword followed by dot(.) and then target. Here is a primer on what it is and how to make use of it.
+gist: ECMAScript 2015 has introduced a new meta-property or expression known as `new.target` (or `newTarget`);  'new' keyword followed by dot(.) and then `target`. Here is a primer on what it is and how to make use of it.
 categories: [JavaScript]
 tag: [ES2015,ES6,ECMASCRIPT2015,JavaScript]
 ---
@@ -266,7 +266,7 @@ Thus from the above example of class C and D, it seems that new.target points to
 
 -----------------
 ## Lexical new.target in arrow functions `()=>{}`
-`new.target` are lexical in arrow functions, just like `arguments` and `this` are lexical, ie, value of `new.target` is taken from surrounding environment.
+`new.target` is lexical in arrow functions, just like `arguments` and `this` are lexical, i.e., value of `new.target` is taken from surrounding environment.
 
 
 -----------------
