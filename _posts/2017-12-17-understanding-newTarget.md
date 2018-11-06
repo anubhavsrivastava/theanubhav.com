@@ -16,7 +16,7 @@ Following section shall shed some more light on the newly available meta-propert
 
 ### Table of contents
 
--   [What it new.target](#what-it-newtarget)
+-   [What is new.target](#what-is-newtarget)
 -   [`new.target` as per specification](#newtarget-as-per-specification)
 -   [Primary points](#primary-points)
     -   [Contructor functions/methods](#contructor-functionsmethods)
