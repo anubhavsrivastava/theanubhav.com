@@ -21,9 +21,9 @@ tag:
 draft: false
 ---
 
-## Let's understand how can we make `(a==1 && a==2 && a==3)` to ever be true with help of getter-setter descriptors.
+## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
-We shall take a brief dive into the traditional problem and move on with extension of it.
+We shall take a brief dive into the traditional problem and also solve a problem which is extension of it.
 
 ### Table of contents
 
@@ -68,12 +68,12 @@ The purpose of a question like this in interview, isn't to know the answer to th
 
 The secret here is, loose equality operator (`==`).
 
-In JS, Loose equality compares two values for equality, after converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as === performs it. Loose equality is symmetric: A == B always has identical semantics to B == A for any values of A and B (except for the order of applied conversions).
+In JS, loose equality compares two values for equality, after converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as === performs it. Loose equality is symmetric: A == B always has identical semantics to B == A for any values of A and B (except for the order of applied conversions).
 Refer [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for all in-depth explanation about loose and strict comparison.
 
 Question here is how does JavaScript coerce this values?
 
-Based on values of comparison, type coercion occurs, lets consider a internal fucntion to convert so,
+Based on values of comparison, type coercion occurs, lets consider a internal function to convert so,
 
     ToPrimitive(input, PreferredType?)
 
@@ -115,7 +115,7 @@ Yes, below code would make this true,
 
 #### Explaination
 
-Our understanding from previous problem is, primitive values would never satisfy above condition, we need by some means call a function and inside that function we can perform this magic.
+Our understanding from previous problem is, primitive values would never satisfy above condition, we need by some means call a function and inside that function we can perform this magic. But calling a function would involve `()` after function name. hmmm. strange.
 But since there is no loose equality, .valueOf won't be called by JS Engine, bringing function `Property`, especially `getter`, to the rescue.
 
 ##### What are property descriptors?
