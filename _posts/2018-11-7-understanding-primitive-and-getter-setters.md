@@ -81,10 +81,10 @@ The optional parameter PreferredType indicates the final type of the conversion:
 
 Conversion happens in following order,
 
--   If input is primitive type, return it
--   If input is an object. Call `input.valueOf()`. If the result is primitive, return it.
--   Else, call `input.toString()`. If the result is primitive, return it.
--   throw a `TypeError` (indicating the failure to convert input to a primitive).
+1.  If input is primitive type, return it
+2.  If input is an object. Call `input.valueOf()`. If the result is primitive, return it.
+3.  Else, call `input.toString()`. If the result is primitive, return it.
+4.  throw a `TypeError` (indicating the failure to convert input to a primitive).
 
 If PreferredType is Number, the above algorithm works in specified order.
 If PreferredType is String, steps 2 and 3 are swapped.
