@@ -93,7 +93,7 @@ The default implementation of `valueOf()` returns `this`, while the default impl
 
 This is how the operators + and == call `ToPrimitive()`. (Ahaa! )
 
-So in above code, as soon as JS saw, `a==1`, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1', but incrementing its value for next time.
+So in above code, as soon as JS saw, `a==1`, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1' (incrementing previous value for and returning it).
 Similar coercion came into effect for `a==2` and `a==3` thus incrementing it for next time.
 
 ---
