@@ -31,9 +31,9 @@ We shall take a brief dive into the traditional problem and also solve a problem
 
 -   [Revisiting `(a==1 && a==2 && a==3)` (loose equality) problem](#revisiting-a1--a2--a3-loose-equality-problem)
     -   [Problem `(a==1 && a==2 && a==3)`](#problem-a1--a2--a3)
-    -   [Explaination](#explaination)
+    -   [Explanation](#explanation)
 -   [Problem `(a===1 && a===2 && a===3)` (strict comparison)](#problem-a1--a2--a3-strict-comparison)
-    -   [Explaination](#explaination-1)
+    -   [Explanation](#explanation-1)
         -   [What are property descriptors?](#what-are-property-descriptors)
 
 *   [References](#references)
@@ -64,7 +64,7 @@ Yes, and to make it true one can do this,
 
 The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the `==` comparitor behave strangely.
 
-#### Explaination
+#### Explanation
 
 The secret here is, loose equality operator (`==`).
 
