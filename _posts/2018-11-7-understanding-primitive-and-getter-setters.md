@@ -113,7 +113,7 @@ Yes, below code would make this true,
 
     console.log(a===1 && a===2 && a===3) /true
 
-#### Explaination
+#### Explanation
 
 Our understanding from previous problem is, primitive values would never satisfy above condition, we need by some means call a function and inside that function we can perform this magic. But calling a function would involve `()` after function name. hmmm. strange.
 But since there is no loose equality, .valueOf won't be called by JS Engine, bringing function `Property`, especially `getter`, to the rescue.
