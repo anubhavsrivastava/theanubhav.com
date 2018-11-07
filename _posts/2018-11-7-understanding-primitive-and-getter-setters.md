@@ -188,6 +188,11 @@ This is the solution to our initial problem, wherein we needed to call a functio
 In above mentioned [solution](#problem-a1--a2--a3-strict-comparison), we are defining `a` getter property on window object, so `a` is directly accessible in code (global variables) and hence are able to achieve the result.
 If we define a property called `a` on some other object than `window`, say `object1`, we need to change the condition to `object1.a===1 && object1.a===2 && object1.a===3`.
 
+## Github Gist
+
+-   [Problem `(a==1 && a==2 && a==3)`](https://gist.github.com/anubhavsrivastava/4680a165db9e1abc459c5987e778a674)
+-   [Problem `(a===1 && a===2 && a===3)`](https://gist.github.com/anubhavsrivastava/2bd7cd81fb23d138df99c47988855adc)
+
 ## References
 
 -   [Reddit Post](https://www.reddit.com/r/javascript/comments/7r0i00/can_a_1_a_2_a3_ever_evaluate_to_true/)
