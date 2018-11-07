@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
   <title>{% if page.use-site-title %}{{ site.title }} {{ site.title-separator }} {{ site.description }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
@@ -13,7 +13,9 @@
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ site.title-separator }} {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+  {% include gtag.html %}
   {% include gtm_head.html %}
+  {% include google_analytics.html %}
 
   {% if layout.common-ext-css %}
     {% for css in layout.common-ext-css %}
@@ -88,7 +90,7 @@
   {% elsif site.avatar %}
   <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
-  
+
 
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
@@ -115,6 +117,10 @@
   <meta name="twitter:image" content="{{ page.share-img }}" />
   {% elsif site.avatar %}
   <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
+  {% endif %}
+
+  {% if site.matomo %}
+  {% include matomo.html %}
   {% endif %}
 
 </head>
