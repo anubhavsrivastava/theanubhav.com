@@ -136,7 +136,10 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
 
     Sample:
 
-    `{ value: 5, writable: true }`
+        {
+            value: 5,
+            writable: true
+        }
 
 2.  Accessor descriptor
 
@@ -151,7 +154,10 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
 
     Sample:
 
-    `{ get: function () { return 5; }, enumerable: true }`
+        {
+            get: function () { return 5; },
+            enumerable: true
+        }
 
 Accessor Example from Mozilla pages,
 
