@@ -182,10 +182,10 @@ Accessor Example from Mozilla pages,
         // unless o.b is redefined
 
 A property on a object be defined by using `Object.defineProperty` as mentioned in the solution. You can dig into syntax and definition [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) .
-Interestingly, `get` and `set` are accessors which can be called via dot(.) operator, i.e if object `a` has getter property called `b` then it is called just like any other value iwth dot notation, viz, `a.b`.
-Here is the solution to our problem, we are able to call a function without using `()` after function name. This is the solution to the problem.
+Interestingly, `get` and `set` are accessors which can be called via dot(.) operator, i.e if object `a` has getter property called `b` then it is called just like any other value with dot notation, viz, `a.b`.
+This is the solution to our initial problem, wherein we needed to call a function without `()`, with `get` property, we are able to call a function without using `()` after function name.
 
-In above mentioned solution, we are defining `a` getter property on window object, so `a` is directly accessible in code (global variables) and hence are able to achieve the result.
+In above mentioned [solution](#problem-a1--a2--a3-strict-comparison), we are defining `a` getter property on window object, so `a` is directly accessible in code (global variables) and hence are able to achieve the result.
 If we define a property called `a` on some other object than `window`, say `object1`, we need to change the condition to `object1.a===1 && object1.a===2 && object1.a===3`.
 
 ## References
