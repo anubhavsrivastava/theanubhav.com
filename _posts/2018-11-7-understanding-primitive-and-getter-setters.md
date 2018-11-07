@@ -77,21 +77,21 @@ Based on values of comparison, type coercion occurs, lets consider a internal fu
 
     ToPrimitive(input, PreferredType?)
 
-The optional parameter PreferredType indicates the final type of the conversion: it is either Number or String, depending on whether the result of ToPrimitive() will be converted to a number or a string.
+The optional parameter PreferredType indicates the final type of the conversion: it is either Number or String, depending on whether the result of `ToPrimitive()` will be converted to a number or a string.
 
 Conversion happens in following order,
 
 -   If input is primitive type, return it
--   If input is an object. Call input.valueOf(). If the result is primitive, return it.
--   Else, call input.toString(). If the result is primitive, return it.
--   throw a TypeError (indicating the failure to convert input to a primitive).
+-   If input is an object. Call `input.valueOf()`. If the result is primitive, return it.
+-   Else, call `input.toString()`. If the result is primitive, return it.
+-   throw a `TypeError` (indicating the failure to convert input to a primitive).
 
 If PreferredType is Number, the above algorithm works in specified order.
 If PreferredType is String, steps 2 and 3 are swapped.
 The PreferredType can also be omitted; it is then considered to be String for dates and Number for all other values.
-The default implementation of valueOf() returns `this`, while the default implementation of `toString()` returns type information.
+The default implementation of `valueOf()` returns `this`, while the default implementation of `toString()` returns type information.
 
-This is how the operators + and == call ToPrimitive(). (Ahaa! )
+This is how the operators + and == call `ToPrimitive()`. (Ahaa! )
 
 So in above code, as soon as JS saw, `a==1`, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1', but incrementing its value for next time.
 Similar coercion came into effect for `a==2` and `a==3` thus incrementing it for next time.
