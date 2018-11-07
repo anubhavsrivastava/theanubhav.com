@@ -62,13 +62,13 @@ Yes, and to make it true one can do this,
 
     console.log(a==1 && a==2 && a==3); //true
 
-The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the '==' comparitor behave strangely.
+The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the `==` comparitor behave strangely.
 
 #### Explaination
 
 The secret here is, loose equality operator (`==`).
 
-In JS, loose equality compares two values for equality, after converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as === performs it. Loose equality is symmetric: A == B always has identical semantics to B == A for any values of A and B (except for the order of applied conversions).
+In JS, loose equality compares two values for equality, after converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as `===` performs it. Loose equality is symmetric: `A == B` always has identical semantics to `B == A` for any values of A and B (except for the order of applied conversions).
 Refer [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for all in-depth explanation about loose and strict comparison.
 
 Question here is how does JavaScript coerce this values?
@@ -93,8 +93,8 @@ The default implementation of valueOf() returns `this`, while the default implem
 
 This is how the operators + and == call ToPrimitive(). (Ahaa! )
 
-So in above code, as soon as JS saw, a==1, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1', but incrementing its value for next time.
-Similar coercion came into effect for a==2 and a==3 thus incrementing it for next time.
+So in above code, as soon as JS saw, `a==1`, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1', but incrementing its value for next time.
+Similar coercion came into effect for `a==2` and `a==3` thus incrementing it for next time.
 
 ---
 
@@ -136,10 +136,7 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
 
     Sample:
 
-    {
-    value: 5,
-    writable: true
-    }
+    `{ value: 5, writable: true }`
 
 2.  Accessor descriptor
 
@@ -154,12 +151,7 @@ A _property descriptor_ can be of two types: data descriptor, or accessor descri
 
     Sample:
 
-    {
-    get: function () {
-    return 5;
-    },
-    enumerable: true
-    }
+    `{ get: function () { return 5; }, enumerable: true }`
 
 Accessor Example from Mozilla pages,
 
