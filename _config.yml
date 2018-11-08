@@ -118,7 +118,7 @@ url-pretty: 'theAnubhav.com' # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: ''
+disqus: 'theanubhav'
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
@@ -258,6 +258,5 @@ prose:
 plugins:
     - jekyll-paginate
     - jekyll-sitemap
-
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
