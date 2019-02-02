@@ -1,7 +1,7 @@
 ---
 layout: post
 title: >-
-    1Awesome list (of github) for UI Component Libraries based on UI Toolkits
+    Currying in JS: Answering the traditional question, Add(2)(3), which gives 5
 subtitle: >-
     Curated list of things for UI Component of React, Angular, Ember, Vue and Mithril JS for Open source community
 avatar: /img/avatars/avatar-gh.png
