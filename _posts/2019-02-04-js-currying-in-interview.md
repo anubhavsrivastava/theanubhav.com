@@ -1,9 +1,9 @@
 ---
 layout: post
 title: >-
-    Currying in JS: Answering the traditional question, Add(2)(3), which gives 5
+    Currying in JS: Answering the traditional question, Add(2)(3), which gives sum of both numbers.
 subtitle: >-
-    Curated list of things for UI Component of React, Angular, Ember, Vue and Mithril JS for Open source community
+    Understanding concept of currying and in depth analysis of most frequest interview question around it
 avatar: /img/avatars/avatar-gh.png
 gist: >-
     The great thing about awesome-x is that there is one place to go to find all things awesome.
@@ -18,10 +18,6 @@ tag:
 
 draft: true
 ---
-
-<div align="center">
-	<img  src="/img/avatars/avatar-awesome.png" alt="Awesome" />
-</div>
 
 # What is `awesome lists`?
 
