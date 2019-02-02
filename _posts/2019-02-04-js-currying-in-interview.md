@@ -9,12 +9,12 @@ gist: >-
     The great thing about awesome-x is that there is one place to go to find all things awesome.
     An awesome list is a list of awesome things curated by the community.
 categories:
-    - awesome
-    - awesome-list
+    - JavaScript
+    - JS
+    - Questions
 tag:
-    - awesome
-    - awesome-list
-    - uikit
+    - JavaScript
+    - Interview-Questions
 
 draft: false
 ---
