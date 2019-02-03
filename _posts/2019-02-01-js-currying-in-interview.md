@@ -151,12 +151,44 @@ This could be used in following manner,
     > var t = add(3)(4)(5)
     > t() //ouput: 12
 
-#### add(2)(3)
+#### `add(2)(3)(4) and add(2,3,4)` usage in same function.
 
--   simple solution
--   next level
+This is another variance, where in same function should satisfy both use case `add(2)(3)(4)` and `add(2,3,4)` or any combination. So, a single function should satisfy following cases,
 
--   will only consider 3
+-   add(2)(3)(4)
+-   add(2,3,4)
+-   add(2)(3,4)
+-   add(2,3)(4)
+
+For this type, let us consider there would be fixed 'n' number of arguments (in our case, n=3). If we need to implement this with variable number of arguments we could club solution of these problem with solution of above discussed problem.
+The trick here is to keep track of 'n' arguments and as soon as we have sufficient number of arguments, we return the sum.
+
+##### 1. Solution using `arguments` count
+
+Following code keeps a count of total arguments passed and if it reaches 3, it gives the resultant sum
+
+    function add(){
+        let args = [].slice.apply(arguments);
+        function resultFn(){
+            args = args.concat([].slice.apply(arguments));
+            if(args.length>=3){
+                return args.slice(0,3).reduce(function(acc,next){ return acc+next},0); //will only sum first 3 arguments
+            }
+            return resultFn;
+        }
+        return resultFn();
+    }
+
+Sample usage,
+
+    > add(2)(3)(4) //output: 9
+    > add(2,3,4) //output: 9
+    > add(2)(3,4) //output: 9
+    > add(2,3)(4) //output: 9
+
+##### 2. Generic solution for fixed argument function
+
+The approach here is to create a higher order function, which would take a function and number of arguments that are must for this function - say 3 in our case for add(2,3,4). This function would keep track of arguments unless the total collected arguments is same as expected no of arguments for the passed function.
 
 ## Github Gist
 
@@ -164,6 +196,7 @@ This could be used in following manner,
 -   [`add(2)(3)(4)...` via valueOf.](https://gist.github.com/anubhavsrivastava/d178cb41a11795a078a327e3d9e3635c)
 -   [`add(2)(3)(4)...` via explicit result property.](https://gist.github.com/anubhavsrivastava/6772d1a69d2581d9db2b8b742adb7beb)
 -   [`add(2)(3)...` via explicit argumentless call](https://gist.github.com/anubhavsrivastava/b6301e95b7b405b6fb548a194a7c20f4)
+-   [`add(2)(3)(4) with add(2,3,4)` via argument count](https://gist.github.com/anubhavsrivastava/50236dde3561454708d57830398b1226)
 
 ## References
 
