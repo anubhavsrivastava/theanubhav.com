@@ -1,12 +1,15 @@
 ---
 layout: post
 title: >-
-    Currying in JS: Answering the traditional question, Add(2)(3), which gives sum of both numbers.
+    Currying in JS: Answering the traditional question, Add(2)(3), which gives sum
+    of both numbers.
 subtitle: >-
-    Understanding concept of currying and in depth analysis of most frequent interview question around it
+    Understanding concept of currying and in depth analysis of most frequent
+    interview question around it
 avatar: /img/avatars/avatar-js.png
 gist: >-
-    We will have a look at concepts that revolve around this question and progressively take it to next level.
+    We will have a look at concepts that revolve around this question and
+    progressively take it to next level.
 categories:
     - JavaScript
     - JS
@@ -14,13 +17,23 @@ categories:
 tag:
     - JavaScript
     - Interview-Questions
-
 draft: false
 ---
 
 ### Table of contents
 
 <!-- toc -->
+
+-   [First, Implement `add(2)(3)` in JavaScript](#first-implement-add23-in-javascript)
+-   [What is currying?](#what-is-currying)
+-   [Variants of add(2)(3) problem](#variants-of-add23-problem)
+    -   [`add(2)(3)(4)...`, for endless number of parameters](#add234-for-endless-number-of-parameters)
+        -   [Making use of `valueOf` property](#making-use-of-valueof-property)
+        -   [Explicit call to a property](#explicit-call-to-a-property)
+    -   [add(2)(3)](#add23)
+
+*   [Github Gist](#github-gist)
+*   [References](#references)
 
 <!-- tocstop -->
 
@@ -65,7 +78,7 @@ Hmmm, we know how to handle the summation and returning function (along with clo
 
 ##### Making use of `valueOf` property
 
-We have already seen how `ToPrimitive` operation is handled by JS engine in this [blog](2018/11/07/understanding-primitive-and-getter-setters/). Taking into consideration of this fact, if we return an object(or function) whose `valueOf` property returns the resultant calculated so far, we would be able to differentiate between returning a function for further summation and result of summation so far.
+We have already seen how `ToPrimitive` operation is handled by JS engine in this [blog](/2018/11/07/understanding-primitive-and-getter-setters/). Taking into consideration of this fact, if we return an object(or function) whose `valueOf` property returns the resultant calculated so far, we would be able to differentiate between returning a function for further summation and result of summation so far.
 Let's see,
 
     function add(x){
@@ -115,9 +128,26 @@ Consumption would look something like this,
     > t.result //output: 7
     > t(5).result //output: 12
 
--   Explicit call to function with no arguments for final result
+##### Explicit call to function with no arguments for final result
 
 One could also design the function to return resultant summation when the function is called with no arguments. If argument is passed, it will keep adding those numbers to previous result.
+
+    function add(x){
+        let sum = x;
+        return function resultFn(y){
+            if(arguments.length){ //not relying on falsy value
+                sum += y;
+                return resultFn;
+            }
+            return sum;
+        }
+    }
+
+This could be used in following manner,
+
+    > add(2)(3)() //output: 5
+    > var t = add(3)(4)(5)
+    > t() //ouput: 12
 
 #### add(2)(3)
 
