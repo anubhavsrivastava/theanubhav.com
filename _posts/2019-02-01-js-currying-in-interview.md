@@ -4,7 +4,7 @@ title: >-
     Currying in JS: Answering the traditional question, Add(2)(3), which gives sum of both numbers.
 subtitle: >-
     Understanding concept of currying and in depth analysis of most frequest interview question around it
-avatar: /img/avatars/avatar-gh.png
+avatar: /img/avatars/avatar-js.png
 gist: >-
     We will have a look at concepts that revolve around this question and progressively take it to next level.
 categories:
@@ -15,8 +15,10 @@ tag:
     - JavaScript
     - Interview-Questions
 
-draft: true
+draft: false
 ---
+
+# Implement `Add(2)(3)`
 
 ## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
