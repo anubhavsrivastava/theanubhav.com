@@ -63,38 +63,38 @@ Few variations in this currying problem may also be seen floating around
 
 Hmmm, we know how to handle the summation and returning function (along with closure) but we arent sure when to stop, which implies, when would primary function return the result and when would it reture another curried function. There are possibily two options,
 
--   Making use of `valueOf` property
+##### Making use of `valueOf` property
 
-    We have already seen how `ToPrimitive` operation is handled by JS engine in this [blog](2018/11/07/understanding-primitive-and-getter-setters/). Taking into consideration of this fact, if we return an object(or function) whose `valueOf` property returns the resultant calculated so far, we would be able to differentiate between returning a function for further summation and result of summation so far.
-    Let's see,
+We have already seen how `ToPrimitive` operation is handled by JS engine in this [blog](2018/11/07/understanding-primitive-and-getter-setters/). Taking into consideration of this fact, if we return an object(or function) whose `valueOf` property returns the resultant calculated so far, we would be able to differentiate between returning a function for further summation and result of summation so far.
+Let's see,
 
-        function add(x){
-            let sum = x;
-            function resultFn(y){
-                sum += y;
-                return resultFn;
-            }
-            resultFn.valueOf = function(){
-                    return sum;
-                };
+    function add(x){
+        let sum = x;
+        function resultFn(y){
+            sum += y;
             return resultFn;
         }
+        resultFn.valueOf = function(){
+                return sum;
+            };
+        return resultFn;
+    }
 
-    The following execution would work,
+The following execution would work,
 
-        > 5 + add(2)(3) //output: 10
-        > console.log(add(2)(3)(4)==9) //output: true
-        > add(3)(4)(5).valueOf() //output: 12
+    > 5 + add(2)(3) //output: 10
+    > console.log(add(2)(3)(4)==9) //output: true
+    > add(3)(4)(5).valueOf() //output: 12
 
-    On the other hand, this won't work or would unexpectedly at few places, for instance
+On the other hand, this won't work or would unexpectedly at few places, for instance
 
-        > add(3)(4)(5) //return function
-        > console.log(add(3)(4)(5)) // output: function
-        > console.log(add(3)(4)(5)===12)// output: false
+    > add(3)(4)(5) //return function
+    > console.log(add(3)(4)(5)) // output: function
+    > console.log(add(3)(4)(5)===12)// output: false
 
-    This behavior is due to the fact that `valueOf` property would be called by JS engine when it needs to convert the result of add(2)(3)(4) to primitive type. All the above statements that gave correct result are due to the fact that JS engine tried to convert the result into primitive value.
+This behavior is due to the fact that `valueOf` property would be called by JS engine when it needs to convert the result of add(2)(3)(4) to primitive type. All the above statements that gave correct result are due to the fact that JS engine tried to convert the result into primitive value.
 
--   Explicit call to a property
+##### Explicit call to a property
 
 Another approach could be, we follow a convention, that consumer of the function should explicitly call a property in result to get the summation. This solution is very much similar to solution using `valueOf`, but no implicit conversion takes place.
 Something like this,
@@ -115,7 +115,9 @@ Consumption would look something like this,
     > t.result //output: 7
     > t(5).result //output: 12
 
--   () as last
+-   Explicit call to function with no arguments for final result
+
+One could also design the function to return resultant summation when the function is called with no arguments. If argument is passed, it will keep adding those numbers to previous result.
 
 #### add(2)(3)
 
@@ -124,15 +126,12 @@ Consumption would look something like this,
 
 -   will only consider 3
 
-#### Explanation
-
-### N number of parameters Add()()()()
-
 ## Github Gist
 
 -   [`add(2)(3)` implementation in JS.](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
 -   [`add(2)(3)(4)...` via valueOf.](https://gist.github.com/anubhavsrivastava/d178cb41a11795a078a327e3d9e3635c)
 -   [`add(2)(3)(4)...` via explicit result property.](https://gist.github.com/anubhavsrivastava/6772d1a69d2581d9db2b8b742adb7beb)
+-   [`add(2)(3)...` via explicit argumentless call](https://gist.github.com/anubhavsrivastava/b6301e95b7b405b6fb548a194a7c20f4)
 
 ## References
 
