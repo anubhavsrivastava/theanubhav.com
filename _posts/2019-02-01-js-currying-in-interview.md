@@ -18,7 +18,13 @@ tag:
 draft: false
 ---
 
-# First, Implement `add(2)(3)` in JavaScript
+### Table of contents
+
+<!-- toc -->
+
+<!-- tocstop -->
+
+#### First, Implement `add(2)(3)` in JavaScript
 
 To begin with, if we do a simple analysis we may simply state that this is not a problem just for JavaScript but can be implemented in any language that has First Class functions.
 
@@ -40,13 +46,13 @@ Which can also be implemented in ES6 using arrow functions as,
 
     const add = x => y => x+y;
 
-## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
+This problem is nothing but `currying` in JS
 
-### Table of contents
+#### What is currying?
 
-<!-- toc -->
-
-<!-- tocstop -->
+Currying is a technique of evaluating a function with multiple arguments, into sequence of function with single/multiple argument.
+In above problem, we simply turn up `add(2,3)` into `add(2)(3)`.
+You can dig into currying from this [article](https://bjouhier.wordpress.com/2011/04/04/currying-the-callback-or-the-essence-of-futures/).
 
 ### Problem 1 Add(2)(3)
 
@@ -75,8 +81,10 @@ There is also a [reddit](https://www.reddit.com/r/javascript/comments/7r0i00/can
 
 ## Github Gist
 
--   [`add(2)(3)` implemenation](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
+-   [`add(2)(3)` implementation in JS.](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
 
 ## References
+
+-   [Article - Currying the callback, or the essence of futures](https://bjouhier.wordpress.com/2011/04/04/currying-the-callback-or-the-essence-of-futures/)
 
 ---
