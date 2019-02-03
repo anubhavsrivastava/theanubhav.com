@@ -18,7 +18,15 @@ tag:
 draft: false
 ---
 
-# Implement `Add(2)(3)`
+# First, Implement `Add(2)(3)` in JavaScript
+
+To begin with, if we do a simple analysis we may simply state that this is not a problem just for JavaScript but can be implemented in any language that has First Class functions.
+
+A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+Now we just need to create a function which returns another function, which in turn would give the sum. That's it.
+
+s
 
 ## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
