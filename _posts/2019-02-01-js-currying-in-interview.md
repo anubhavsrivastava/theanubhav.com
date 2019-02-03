@@ -108,6 +108,13 @@ Something like this,
         }
     }
 
+Consumption would look something like this,
+
+    > add(3)(4)(5).result //output: 12
+    > var t = add(3)(4);
+    > t.result //output: 7
+    > t(5).result //output: 12
+
 -   () as last
 
 #### add(2)(3)
