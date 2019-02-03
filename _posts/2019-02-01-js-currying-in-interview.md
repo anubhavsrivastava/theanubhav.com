@@ -18,7 +18,7 @@ tag:
 draft: false
 ---
 
-# First, Implement `Add(2)(3)` in JavaScript
+# First, Implement `add(2)(3)` in JavaScript
 
 To begin with, if we do a simple analysis we may simply state that this is not a problem just for JavaScript but can be implemented in any language that has First Class functions.
 
