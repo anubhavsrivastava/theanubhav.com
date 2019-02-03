@@ -26,6 +26,20 @@ A programming language is said to have First-class functions when functions in t
 
 Now we just need to create a function which returns another function, which in turn would give the sum. That's it.
 
+Before moving on, please try this problem if you have encountered it for first time.
+
+Solution,
+
+    function add(x){
+        return function (y){
+            return x+y;
+        }
+    }
+
+Which can also be implemented in ES6 using arrow functions as,
+
+    const add = x => y => x+y;
+
 ## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
 ### Table of contents
