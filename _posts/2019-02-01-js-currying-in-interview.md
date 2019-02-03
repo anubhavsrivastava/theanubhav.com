@@ -190,6 +190,37 @@ Sample usage,
 
 The approach here is to create a higher order function, which would take a function and number of arguments that are must for this function - say 3 in our case for add(2,3,4). This function would keep track of arguments unless the total collected arguments is same as expected no of arguments for the passed function.
 
+    function fixCurry(fn, totalArgs){
+        totalArgs = totalArgs ||fn.length
+            return function recursor(){
+                return arguments.length<fn.length?recursor.bind(this, ...arguments): fn.call(this, ...arguments);
+            }
+    }
+
+The above function takes in a function - `fn`, and optionally `totalArgs` that are mandatory before calling `fn`. If `totalArgs` aren't passed it will rely on function signature and use the property `fn.length` which is number of parameter a function has been defined with.
+`totalArgs` may be used for function - `fn` whose implementation itself relies on `arguments` and no parameters are defined in its signature.
+`fixCurry` returns a function who keeps adding (via `bind`) arguments to a function, if the threshold reaches, it just calls the function with all parameter collected so far between all calls.
+
+Lets see sample usage,
+
+    > var add = fixCurry((a,b,c)=>a+b+c); //fn = summation function
+    > console.log(add(1,2, 3))  // output: 6
+    > console.log(add(1)(2,3)) // output: 6
+    > console.log(add(1)(3)(2)) // output: 6
+    > console.log(add(1,2)(3)) // output: 6
+
+Same would work for multiply (or any other curried function),
+
+    > var multiply = fixCurry((a,b,c)=>a*b*c); //fn = multiplication function
+    > console.log(multiply(1,2, 3))  // output: 6
+    > console.log(multiply(1)(2,3)) // output: 6
+    > console.log(multiply(1)(3)(2)) // output: 6
+    > console.log(multiply(1,2)(3)) // output: 6
+
+This `fixCurry` can also be used for currying any function with fixed parameter.
+
+Another thing to note with `add` and `multiple` example is, addition and multiplication of first 3 natural number is same. [#MindBlown](https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif)
+
 ## Github Gist
 
 -   [`add(2)(3)` implementation in JS.](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
@@ -197,6 +228,7 @@ The approach here is to create a higher order function, which would take a funct
 -   [`add(2)(3)(4)...` via explicit result property.](https://gist.github.com/anubhavsrivastava/6772d1a69d2581d9db2b8b742adb7beb)
 -   [`add(2)(3)...` via explicit argumentless call](https://gist.github.com/anubhavsrivastava/b6301e95b7b405b6fb548a194a7c20f4)
 -   [`add(2)(3)(4) with add(2,3,4)` via argument count](https://gist.github.com/anubhavsrivastava/50236dde3561454708d57830398b1226)
+-   [`add(2)(3)(4) with add(2,3,4)` , generic solution](https://gist.github.com/anubhavsrivastava/d02e115f321de4852942c31627e33e0d)
 
 ## References
 
