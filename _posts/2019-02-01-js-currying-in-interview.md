@@ -26,8 +26,6 @@ A programming language is said to have First-class functions when functions in t
 
 Now we just need to create a function which returns another function, which in turn would give the sum. That's it.
 
-s
-
 ## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
 ### Table of contents
@@ -62,6 +60,8 @@ There is also a [reddit](https://www.reddit.com/r/javascript/comments/7r0i00/can
 ##### What are currying?
 
 ## Github Gist
+
+-   [`add(2)(3)` implemenation](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
 
 ## References
 
