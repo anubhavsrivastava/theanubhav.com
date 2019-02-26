@@ -1,8 +1,7 @@
 ---
 layout: post
 title: >-
-    Currying in JS: Answering the traditional question, Add(2)(3), which gives sum
-    of both numbers.
+    Playing HTTP status code game like it is meant to be.
 subtitle: >-
     Understanding concept of currying and in depth analysis of most frequent
     interview questions around it
