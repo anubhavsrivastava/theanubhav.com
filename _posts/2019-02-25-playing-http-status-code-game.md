@@ -3,8 +3,7 @@ layout: post
 title: >-
     Playing HTTP status code game like it is meant to be.
 subtitle: >-
-    Understanding concept of currying and in depth analysis of most frequent
-    interview questions around it
+    What you need to know about HTTP status codes and RFCs around it
 avatar: /img/avatars/avatar-js.png
 # gh-badge:
 #     - fork
