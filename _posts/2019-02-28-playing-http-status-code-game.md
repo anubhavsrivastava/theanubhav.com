@@ -11,12 +11,14 @@ gist: >-
     We will have a look at concepts that revolve around this question and
     progressively take it to next level.
 categories:
-    - JavaScript
-    - JS
-    - Questions
+    - HTTP
+    - Web
+    - FullStack
+    - Project
 tag:
-    - JavaScript
-    - Interview-Questions
+    - HTTP
+    - HTTP status code
+    - Web
 draft: true
 ---
 
