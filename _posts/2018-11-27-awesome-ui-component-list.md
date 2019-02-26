@@ -5,6 +5,12 @@ title: >-
 subtitle: >-
     Curated list of things for UI Component of React, Angular, Ember, Vue and Mithril JS for Open source community
 avatar: /img/avatars/avatar-gh.png
+gh-repo: anubhavsrivastava/awesome-ui-component-library
+gh-badge:
+    - fork
+    - star
+    - watch
+    - follow
 gist: >-
     The great thing about awesome-x is that there is one place to go to find all things awesome.
     An awesome list is a list of awesome things curated by the community.
