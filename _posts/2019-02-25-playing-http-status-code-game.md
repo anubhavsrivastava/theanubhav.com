@@ -3,7 +3,7 @@ layout: post
 title: >-
     Playing HTTP status code game like it is meant to be.
 subtitle: >-
-    What you need to know about HTTP status codes and RFCs around it
+    What you need to know about HTTP status codes and specifications around it
 avatar: /img/avatars/avatar-js.png
 # gh-badge:
 #     - fork
@@ -12,8 +12,7 @@ avatar: /img/avatars/avatar-js.png
 #     - follow
 gh-repo: anubhavsrivastava/whats-my-http-statuscode
 gist: >-
-    We will have a look at concepts that revolve around this question and
-    progressively take it to next level.
+    We will understand important of HTTP status code and check common codes that should find a place in your application.
 categories:
     - HTTP
     - Web
