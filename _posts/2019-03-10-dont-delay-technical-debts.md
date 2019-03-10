@@ -70,11 +70,11 @@ Even though this is very small and basic example, re-work were also in magnitude
 
 Apart from monetary and time aspect that is pumped for technical debt, here are few other side effects that add up to the unwanted cause.
 
-#### Frustrations and De-motivation for Development Teams.
+#### Frustrations and De-motivation for Development Teams
 
 This is one of biggest side-effect that generates over time. If couple of high issues keep adding, and technically product is not at 'state-of-the-art' level. Developer and teams working on such product ofter feel frustrated, and ofcourse this frustration would result into other side effects. Nonetheless, it also demotivates and team takes a hit on its morale.
 
-#### “if it’s not broke, don’t fix it” disease.
+#### “if it’s not broke, don’t fix it” disease
 
 If debt are huge, developer and in fact, teams hessit to clear up the huge task which was tiny in the beginning. This furthur results into 'turning a blind eye' behavior, not taking up issue unless it becomes a must fix. Final nail in the coffin is spread of this behavior/culture across devs, teams, orgs and company. For any organization, this is a huge cultural damage and hard to recover from.
 
@@ -82,6 +82,14 @@ If debt are huge, developer and in fact, teams hessit to clear up the huge task 
 
 A part of entire system, if suffers from technical limitation, consumer of the service also suffer over long time. If core service (say authentication) can only handle 'x' api calls per minute, other parts of the product will need to design its feature in accordant manner. Thus, adding a design limitation to multiple service and product as a whole.
 
-#### Reactive product development instead of proactive.
+#### Reactive product development instead of proactive
+
+With legacy system, one has to always do work-arounds to accomplish and implement latest features and trending stuff. This pushes the product into reactive mode and takes away proactive product development mode, implying when the need would arise based on external forces things would be implemented.
+
+---
+
+Technical debt are always compared in terms of numbers and finances, like in this post. But more then the calculated metrics, it is something that is beyond numbers. Something like health, the more prolonged bad state it has, the more harder to recover, in fact sometimes it is unrecoverable.
+
+So do you have any important tech-debt? Fix it now, because if it is not done now, probably it will never be done.
 
 ---
