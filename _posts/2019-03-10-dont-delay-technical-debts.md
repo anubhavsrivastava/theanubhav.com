@@ -54,7 +54,11 @@ Same is the case with technical debts. The difference being, no theoretical mean
 
 Understanding what part of missing piece/better solution is technical debt rather than product debt. Let us consider this aspect with a product example. Consider this blog site, has set of limited articles(as of now). There is this feature associated with articles about approximate reading time like "~5 min read" or "10 min read", on blogging sites like medium/wordpress, which helps user to judge it. Either mark it as bookmark, or keep it in one of hundred tabs in browser, or read it now, or get a coffee, or simply move from chair to couche. It is established feature that helps the user.
 
-This blogging site does not have this feature for now (as of now, but will eventually). This is simple product debt and not technical. We may not choose it to implement at all. But learning that this is urgent requirement, I may choose to implement it statically, i.e each article at top would have static indication '10 min read' based on article length and average words read by user, say each 50 words add upto 1 minute. This implementation seems to be technical debt. Because I can on a heuristic manner, add this to each article. Why is this technical debt? Because there is a better solution technically. Since this each article is generated via static site generator - jekyll, a function can be implemented which post length and predict the reading time. This is better for, 1. not rely on author understanding 2. Future proof to tweak this function.
+This blogging site does not have this feature for now (as of now, but will eventually). This is simple product debt and not technical. We may not choose it to implement at all. But learning that this is urgent requirement, I may choose to implement it statically, i.e each article at top would have static indication '10 min read' based on article length and average words read by user, say each 50 words add upto 1 minute. This implementation seems to be technical debt. Because I can on a heuristic manner, add this to each article.
+
+![Read length feature image](/img/post/dont-delay-time-feature.png 'Read length')
+
+Why is this technical debt? Because there is a better solution technically. Since this each article is generated via static site generator - jekyll, a function can be implemented which post length and predict the reading time. This is better for, 1. not rely on author understanding 2. Future proof to tweak this function.
 
 Seems a simple debt, but imagine if after 100 articles, for which I have been adding reading time manually and investing manual time in predicting the length, I learn that users of this blog actually work on different reading speed, say 100 words per minute. If done manually, I would need to account this, change all previous post (say 100) as per new math. Later we realise that this feature relies on category of post, technical post with code are low in reading time while verbose ones have high reading time. Again this would require re-calculations for all post. This is simple example of debt of changing each post everytime.
 
@@ -72,10 +76,12 @@ This is one of biggest side-effect that generates over time. If couple of high i
 
 #### “if it’s not broke, don’t fix it” disease.
 
-If debt are huge, developer and in fact, teams hessit to clear up the huge task which was tiny in the beginning. This furthur results into 'turning a blind eye' behavior, not taking up issue unless it becomes a must fix. Final nail in the coffin is spread of this behavior/culture across devs, teams, orgs and company. For many organizations this is a huge cultural damage.
+If debt are huge, developer and in fact, teams hessit to clear up the huge task which was tiny in the beginning. This furthur results into 'turning a blind eye' behavior, not taking up issue unless it becomes a must fix. Final nail in the coffin is spread of this behavior/culture across devs, teams, orgs and company. For any organization, this is a huge cultural damage and hard to recover from.
 
 #### Prolonged design limitation
 
-#### Reactive product developement instead of proactive.
+A part of entire system, if suffers from technical limitation, consumer of the service also suffer over long time. If core service (say authentication) can only handle 'x' api calls per minute, other parts of the product will need to design its feature in accordant manner. Thus, adding a design limitation to multiple service and product as a whole.
+
+#### Reactive product development instead of proactive.
 
 ---
