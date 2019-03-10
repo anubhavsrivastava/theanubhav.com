@@ -46,6 +46,8 @@ This blogging site does not have this feature for now (as of now, but will event
 
 Seems a simple debt, but imagine if after 100 articles, for which I have been adding reading time manually and investing manual time in predicting the length, I learn that users of this blog actually work on different reading speed, say 100 words per minute. If done manually, I would need to account this, change all previous post (say 100) as per new math. Later we realise that this feature relies on category of post, technical post with code are low in reading time while verbose ones have high reading time. Again this would require re-calculations for all post. This is simple example of debt of changing each post everytime.
 
+Managing this feature for long term would be tedious since purpose of blog site was mainly articles. It would be better if product feature itself was designed with future requirement governing technical aspects as well.
+
 Even though this is very small and basic example, re-work were also in magnitude of the technical debt. Simply, if you take 100$ as loan for a year with 10%, you will need to pay 10$ extra, while on same rate 20 million $ would require additional 2 million. Certainly, 10$ example is no match to 2million\$. But the discussion is not about interest but the rate, i.e 10%. No matter how small but would always be relative.
 
 ---
