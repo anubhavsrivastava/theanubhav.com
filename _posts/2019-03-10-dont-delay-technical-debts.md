@@ -6,7 +6,7 @@ subtitle: >-
     // Todo, the foundation of your future technical limitation and frustration that you planned today.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-    The author feels that gist of this article can be written down some other time due to shortage of time!
+    The author feels that gist of this article can be written down some other day due to shortage of time and would like to  add the technical debt!
 categories:
     - TechTalk
     - TechDebt
@@ -17,6 +17,8 @@ tag:
     - Opinion
 draft: false
 ---
+
+#### Part 1 of 2
 
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
 
@@ -46,8 +48,24 @@ This blogging site does not have this feature for now (as of now, but will event
 
 Seems a simple debt, but imagine if after 100 articles, for which I have been adding reading time manually and investing manual time in predicting the length, I learn that users of this blog actually work on different reading speed, say 100 words per minute. If done manually, I would need to account this, change all previous post (say 100) as per new math. Later we realise that this feature relies on category of post, technical post with code are low in reading time while verbose ones have high reading time. Again this would require re-calculations for all post. This is simple example of debt of changing each post everytime.
 
-Managing this feature for long term would be tedious since purpose of blog site was mainly articles. It would be better if product feature itself was designed with future requirement governing technical aspects as well.
+Managing this feature for long term would be tedious since purpose of blog site was mainly articles. It would be better if product feature itself was designed with future requirement governing technical aspects as well. A developer always pays and will need to pay their technical debts no matter what!
 
-Even though this is very small and basic example, re-work were also in magnitude of the technical debt. Simply, if you take 100$ as loan for a year with 10%, you will need to pay 10$ extra, while on same rate 20 million $ would require additional 2 million. Certainly, 10$ example is no match to 2million\$. But the discussion is not about interest but the rate, i.e 10%. No matter how small but would always be relative.
+Even though this is very small and basic example, re-work were also in magnitude of the technical debt. Simply, if you take 100$ as loan for a year with 10%, you will need to pay 10$ extra, while on same rate 20 million $ would require additional 2 million. Certainly, 10$ example is no match to 2million\$. But the discussion is not about interest but the rate, i.e 10%. However small, but would always be relative. Technical debt is like a loan. The longer you postpone paying it back, the more interest you pay, irrespective of small piece or big piece.
+
+### Side-effects
+
+Apart from monetary and time aspect that is pumped for technical debt, here are few other side effects that add up to the unwanted cause.
+
+#### Frustrations and De-motivation for Development Teams.
+
+This is one of biggest side-effect that generates over time. If couple of high issues keep adding, and technically product is not at 'state-of-the-art' level. Developer and teams working on such product ofter feel frustrated, and ofcourse this frustration would result into other side effects. Nonetheless, it also demotivates and team takes a hit on its morale.
+
+#### “if it’s not broke, don’t fix it” disease.
+
+If debt are huge, developer and in fact, teams hessit to clear up the huge task which was tiny in the beginning. This furthur results into 'turning a blind eye' behavior, not taking up issue unless it becomes a must fix. Final nail in the coffin is spread of this behavior/culture across devs, teams, orgs and company. For many organizations this is a huge cultural damage.
+
+#### Prolonged design limitation
+
+#### Reactive product developement instead of proactive.
 
 ---
