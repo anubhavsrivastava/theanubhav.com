@@ -3,11 +3,11 @@ layout: post
 title: >-
     Don't delay your technical debts!
 subtitle: >-
-    What you need to know about HTTP status codes and specifications around it
+    // Todo, the foundation of your future technical limitation and frustration that you planned today.
 avatar: /img/avatars/avatar-js.png
 gh-repo: anubhavsrivastava/whats-my-http-statuscode
 gist: >-
-    We will understand important of HTTP status code and check common codes that should find a place in your application.
+    The author feels that sub-heading of this article can be written down some other time due to shortage of time!
 categories:
     - TechTalk
     - TechDebt
@@ -25,10 +25,6 @@ draft: false
 
 <!-- tocstop -->
 
-### First, Implement `add(2)(3)` in JavaScript
-
-## Github Gist
-
-## References
+### First, What is this Technical Debt?
 
 ---
