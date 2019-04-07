@@ -86,28 +86,24 @@ Below are some warning signs that a project has created technical debt which a d
 -   Issues with coding style.
 
 At each detection, one should raise a red flag, declare bankruptcy on code and plan it out. Not everything would be do-able at once. Once should, document that in code itself via `TODO`, `FIXME` comment. Opening a ticket in tracking system to track for future. Add it to Product Backlog.
+Asking and Developing a coding style guide and sticking to it, will help to overcome few of above issue.
 
-Asking and Developing a coding style guide and sticking to it, will help to overcome few issue.
+#### Reactively bringing debt to notice and communicating
 
-#### Reactively bringing debt to notice
+One may not have idea beforehand about a thing, but over a period of time, one might understand a better way to do same thing. Thus sensing some debts. In such cases, developer should declare EOL for such part/piece. It would be better to discuss things with team and propose the solution to help future selves. As a team,
+one of the most important steps to take in managing technical debt is to acknowledge that it exists in the first place and share that discovery with key stakeholders. It should be the responsibility of technical management to set the tone and communicate to non-technical managers about the true cost of technical debt. The head must also explain the importance of paying down technical debt sooner rather later.
 
-One may not have idea before about a thing now, but over a period of time, one might understand a better way to do same thing. In such cases, developer would need declare EOL for such part/piece. It would be better to discuss things with team and propose the solution to help future selves.
-
-#### Huge documentation
+#### Continous documentation
 
 Always rely on documentation, use it every where. As the saying goes, "if it is not documented, if was never done". Starting with small documentation of say, function also helps. Going furthur with entire design and thought process without documentation will certainly not help. A good developer always documents, whatever he can, not for others but for himself.
 
-#### Communication
-
-One of the most important steps to take in managing technical debt is to acknowledge that it exists in the first place and share that discovery with key stakeholders. It should be the responsibility of IT management to set the tone and communicate to non-IT managers about the true cost of technical debt. The head of IT must also explain the importance of paying down technical debt sooner rather later.
-
-#### Implementation
+#### Implementation considerations
 
 There are three options to consider in terms of managing technical debt.
 
-Waive the requirement altogether. In other words, the organization decides to live with the system as it is and no longer deems the requirement as necessary. If you cannot waive the requirement, then you will need to refactor or replace the application.
-Refactor the application. This option is aimed at reducing complexity, removing duplicates and improving the structure of the code. Refactoring is the only way to improve a code’s internal structure without changing the behavior of the program.
-Replace the application. While this will introduce new technical debt, the idea is to address it quickly and minimize it as much possible.
+-   Waive the requirement altogether. In other words, the organization decides to live with the system as it is and no longer deems the requirement as necessary. If you cannot waive the requirement, then you will need to refactor or replace the application.
+-   Refactor the application. This option is aimed at reducing complexity, removing duplicates and improving the structure of the code. Refactoring is the only way to improve a code’s internal structure without changing the behavior of the program.
+-   Replace the application. While this will introduce new technical debt, the idea is to address it quickly and minimize it as much possible.
 
 #### Tracking practices
 
@@ -120,7 +116,7 @@ Keep the list visible.
 Inform teams that rely on delivery releases – like marketing, sales, etc. – that you’re working on technical debt, so that each new release cannot include only new features.
 Schedule regular and frequent time to pay off technical debt.
 
-### Detecting and paying the debt regularly
+### Detecting and paying the debt regularly as a team
 
 #### Regular health check up
 
