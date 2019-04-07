@@ -4,18 +4,19 @@ title: Coping up with technical debts as a developer!
 subtitle: Understanding developer's take on technical debt and things around it.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-  Technical debt may be necessary in products, but how one keep a check on it
-  and happily track it.
+    Technical debt may be necessary in products, but how one keep a check on it
+    and happily track it.
 categories:
-  - TechTalk
-  - TechDebt
-  - Opinion
+    - TechTalk
+    - TechDebt
+    - Opinion
 tag:
-  - TechTalk
-  - TechDebt
-  - Opinion
+    - TechTalk
+    - TechDebt
+    - Opinion
 draft: false
 ---
+
 #### Part 2 of 2
 
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
@@ -24,27 +25,27 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 <!-- toc -->
 
-- [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
-- [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
-- [Developer To-do list](#developer-to-do-list)
-  * [Life choices](#life-choices)
-  * [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
-  * [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
-  * [Huge documentation](#huge-documentation)
-  * [Communication](#communication)
-  * [Implementation](#implementation)
-  * [Tracking practices](#tracking-practices)
-- [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
-  * [Regular health check up](#regular-health-check-up)
-  * [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
-  * [Cleanup team](#cleanup-team)
-  * [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
+-   [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
+-   [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
+-   [Developer To-do list](#developer-to-do-list)
+    -   [Life choices](#life-choices)
+    -   [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
+    -   [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
+    -   [Huge documentation](#huge-documentation)
+    -   [Communication](#communication)
+    -   [Implementation](#implementation)
+    -   [Tracking practices](#tracking-practices)
+-   [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
+    -   [Regular health check up](#regular-health-check-up)
+    -   [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
+    -   [Cleanup team](#cleanup-team)
+    -   [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
 
 <!-- tocstop -->
 
 ### First, explanation to “if it’s not broke, don’t fix it” disease
 
-“if it’s not broke, don’t fix it” paradigm is not a problem as such, but if that becomes a excuse/reason for all wrong things that are visible in a product/technical every now and then, that becomes a disease. For instance, Instagram nearly fell prey to these growing disease early on. When it launched its iPhone app in October 2010, it ran its operation off of a single server in Los Angeles. It worked without being "broken" for sometime. But after an onslaught of traffic nearly crashed the server, Instagram pivoted in three days to an EC2-hosted database. Co-founder Mike Krieger compared the transfer to open-heart surgery, and he now works to preemptively address technical debt before it leads to catastrophe.
+“if it’s not broke, don’t fix it” paradigm is not a problem as such, but if that becomes a excuse/reason for all wrong things that are visible in a product/technical every now and then, that becomes a disease. For instance, Instagram nearly fell prey to these growing disease early on. When it launched its iPhone app in October 2010, it ran its operation off of a single server in Los Angeles. It worked without being "broken" for long time. But after an onslaught of traffic nearly crashed the server, Instagram pivoted in three days to an EC2-hosted database. Co-founder Mike Krieger compared the transfer to open-heart surgery, and he now works to preemptively address technical debt before it leads to catastrophe.
 
 ### Understanding the view of debt and making it purely technical
 
@@ -58,7 +59,7 @@ While is is pretty easy and tempting to go back and forth and argue as to what d
 
 ### Developer To-do list
 
-Some Development Teams feel victim to the way that ‘the business’ keeps prioritizing new features over improving the codebase, while on the other hand holding them responsible for bugs, broken code and the results of technical debt. The Development Team can do no right.
+Some Development Teams fall victim to the way that ‘the business’ keeps prioritizing new features over improving the codebase, while on the other hand holding them responsible for bugs, broken code and the results of technical debt. The Development Team can do no right in that case. But a clear communication to stakeholder will certainly help. Here are list of things one can do as a dev,
 
 #### Life choices
 
@@ -67,25 +68,19 @@ As a software developer, you have to add a new functionality to a software or sy
 The easier route – made up of messier code or design, will get you there faster.
 The harder route – made up of cleaner code and design that takes a lot more time.
 
-Choose a path such that sometime, result is same as one coming from harder route. You may choose easier one for now, but eventually make sure that it is transformed into the harder route, by making it planned technical debt.
+Choose a path such that after sometime, result is same as one coming from harder route. You may choose easier one for now, but eventually make sure that it is transformed into the harder route, by making it planned technical debt.
 
-####
+#### Use Code Metrics to quantify Technical Debt
 
-Use Code Metrics to quantify Technical Debt
-Metrics offer a wonderful opportunity to make something subjective and abstract more objective and tangible. It also gives you a measurable goal to improve towards. Several metrics that are useful and broadly available:
-
-Cyclomatic complexity: this metric quantifies the complexity of classes and methods by analyzing the number of functional paths in the code (if/then/else, switch/case, etc) compared to the lines of code used. The higher the cyclomatic complexity, the more difficult code will be to maintain;
-Code coverage: a lack of unit tests is a source of technical debt. Most IDEs and CI-servers can calculate the amount of code covered by unit tests. A good rule of thumb is to make sure that the coverage stays at least the same when new code is added;
-SQALE-rating: a metric that offers a broad evaluation of software quality, based on a number of internal rules. The scale goes from A to E, with A being the highest quality. Most specialized code quality plugins can calculate this rating (see below);
-Number of rule violations: this metric calculates the number of rules violated from a given set of coding conventions. Violations are usually grouped in categories, from critical to minor;
-Cost of Delay: this (mostly manual) metric helps to make visible how much time a team loses due to technical debt;
-Bugcount: as technical debt increases, quality of the software decreases. The number of bugs will likely grow. Monitoring the number of (critical) bugs that pop up is a simple but useful metric to track;
+Metrics offer a wonderful opportunity to make something subjective and abstract more objective and tangible. It also gives you a measurable goal to improve towards.
+Cyclomatic complexity, Code coverage, Continous Integration, Cost of Delay,
+Bugcount, etc. Make sure you set up things so that you can measure them and also analyse them on timely basis.
 
 #### Pro-active raising the red flag
 
 Below are some warning signs that a project has created technical debt which a developer can better understand,
 
--   Code smells are much more subtle than logic errors and indicate problems that are more likely to impact overall performance quality than cause a crash.
+-   Code smells that impact overall performance quality than cause a crash.
 -   Higher levels of complexity — when technologies overlap each other.
 -   Product bugs that will cause an entire system crash.
 -   Issues with coding style.
@@ -148,4 +143,3 @@ Anything that is implemented today should take account of future requirment, if 
 When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
 
 ---
-
