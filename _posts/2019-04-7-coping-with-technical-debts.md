@@ -1,22 +1,21 @@
 ---
 layout: post
 title: Coping up with technical debts as a developer!
-subtitle: >-
-    Understanding developer's take on technical debt and things around it.
+subtitle: Understanding developer's take on technical debt and things around it.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-    Technical debt may be necessary in products, but how one keep a check on it and happily track it.
+  Technical debt may be necessary in products, but how one keep a check on it
+  and happily track it.
 categories:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 tag:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 draft: false
 ---
-
 #### Part 2 of 2
 
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
@@ -24,6 +23,25 @@ Following article would explain most of scenarios with regards to frontend/web d
 ### Table of contents
 
 <!-- toc -->
+
+- [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
+- [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
+- [Examples for real life](#examples-for-real-life)
+- [Why do technical debt occur?](#why-do-technical-debt-occur)
+  * [Time Constraint](#time-constraint)
+  * [Resource Issue](#resource-issue)
+  * [Lack of knowledge](#lack-of-knowledge)
+  * [Customer requirment](#customer-requirment)
+- [Developer To-do list](#developer-to-do-list)
+  * [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
+  * [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
+  * [Code for maintaining the debt](#code-for-maintaining-the-debt)
+  * [Huge documentation](#huge-documentation)
+- [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
+  * [Regular health check up](#regular-health-check-up)
+  * [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
+  * [Cleanup team](#cleanup-team)
+  * [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
 
 <!-- tocstop -->
 
@@ -94,3 +112,4 @@ Anything that is implemented today should take account of future requirment, if 
 When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
 
 ---
+
