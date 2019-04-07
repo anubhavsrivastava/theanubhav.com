@@ -4,18 +4,19 @@ title: Coping up with technical debts as a developer!
 subtitle: Understanding developer's take on technical debt and things around it.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-  Technical debt may be necessary in products, but how one keep a check on it
-  and happily track it.
+    Technical debt may be necessary in products, but how one keep a check on it
+    and happily track it.
 categories:
-  - TechTalk
-  - TechDebt
-  - Opinion
+    - TechTalk
+    - TechDebt
+    - Opinion
 tag:
-  - TechTalk
-  - TechDebt
-  - Opinion
+    - TechTalk
+    - TechDebt
+    - Opinion
 draft: false
 ---
+
 #### Part 2 of 2
 
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
@@ -24,24 +25,24 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 <!-- toc -->
 
-- [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
-- [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
-- [Examples for real life](#examples-for-real-life)
-- [Why do technical debt occur?](#why-do-technical-debt-occur)
-  * [Time Constraint](#time-constraint)
-  * [Resource Issue](#resource-issue)
-  * [Lack of knowledge](#lack-of-knowledge)
-  * [Customer requirment](#customer-requirment)
-- [Developer To-do list](#developer-to-do-list)
-  * [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
-  * [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
-  * [Code for maintaining the debt](#code-for-maintaining-the-debt)
-  * [Huge documentation](#huge-documentation)
-- [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
-  * [Regular health check up](#regular-health-check-up)
-  * [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
-  * [Cleanup team](#cleanup-team)
-  * [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
+-   [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
+-   [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
+-   [Examples for real life](#examples-for-real-life)
+-   [Why do technical debt occur?](#why-do-technical-debt-occur)
+    -   [Time Constraint](#time-constraint)
+    -   [Resource Issue](#resource-issue)
+    -   [Lack of knowledge](#lack-of-knowledge)
+    -   [Customer requirment](#customer-requirment)
+-   [Developer To-do list](#developer-to-do-list)
+    -   [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
+    -   [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
+    -   [Code for maintaining the debt](#code-for-maintaining-the-debt)
+    -   [Huge documentation](#huge-documentation)
+-   [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
+    -   [Regular health check up](#regular-health-check-up)
+    -   [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
+    -   [Cleanup team](#cleanup-team)
+    -   [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
 
 <!-- tocstop -->
 
@@ -55,39 +56,78 @@ Like a glass that is half filled with liquid, someone would call it half empty. 
 
 If we peek down over the system to the last point, we might get "Yes" and a "No" at different parts of system. But as explained in previous blog<insert previous blog> 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and unprofessionalism, and has no chance of paying of in the future. A mess is always a loss.
 
-A thumb rule used by me to differentiate between the two is, mess is result of laziness and unprofessionalism or lack of desire to make it look correct to oneself. While reasons for technical debt may differ (discussed below)
+A thumb rule used by me to differentiate between the two is, mess is result of laziness and unprofessionalism or lack of desire to make it look correct to oneself. In a way tech debt is the engineering trade-off’s that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
 
 While is is pretty easy and tempting to go back and forth and argue as to what does or does not constitute a ‘technical debt’ based on how it came about, I think it might be helpful to look at things slightly differently and not get so hung up on the intentions when you took out the loan etc.
 
-### Examples for real life
-
-### Why do technical debt occur?
-
-In a way it is the engineering trade-off’s that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
-
-#### Time Constraint
-
-#### Resource Issue
-
-#### Lack of knowledge
-
-#### Customer requirment
-
 ### Developer To-do list
+
+Some Development Teams feel victim to the way that ‘the business’ keeps prioritizing new features over improving the codebase, while on the other hand holding them responsible for bugs, broken code and the results of technical debt. The Development Team can do no right.
+
+#### Life choices
+
+As a software developer, you have to add a new functionality to a software or system. There’s two paths to choose:
+
+The easier route – made up of messier code or design, will get you there faster.
+The harder route – made up of cleaner code and design that takes a lot more time.
+
+Choose a path such that sometime, result is same as one coming from harder route. You may choose easier one for now, but eventually make sure that it is transformed into the harder route, by making it planned technical debt.
+
+####
+
+Use Code Metrics to quantify Technical Debt
+Metrics offer a wonderful opportunity to make something subjective and abstract more objective and tangible. It also gives you a measurable goal to improve towards. Several metrics that are useful and broadly available:
+
+Cyclomatic complexity: this metric quantifies the complexity of classes and methods by analyzing the number of functional paths in the code (if/then/else, switch/case, etc) compared to the lines of code used. The higher the cyclomatic complexity, the more difficult code will be to maintain;
+Code coverage: a lack of unit tests is a source of technical debt. Most IDEs and CI-servers can calculate the amount of code covered by unit tests. A good rule of thumb is to make sure that the coverage stays at least the same when new code is added;
+SQALE-rating: a metric that offers a broad evaluation of software quality, based on a number of internal rules. The scale goes from A to E, with A being the highest quality. Most specialized code quality plugins can calculate this rating (see below);
+Number of rule violations: this metric calculates the number of rules violated from a given set of coding conventions. Violations are usually grouped in categories, from critical to minor;
+Cost of Delay: this (mostly manual) metric helps to make visible how much time a team loses due to technical debt;
+Bugcount: as technical debt increases, quality of the software decreases. The number of bugs will likely grow. Monitoring the number of (critical) bugs that pop up is a simple but useful metric to track;
 
 #### Pro-active raising the red flag
 
-    declaring bankruptcy on legacy code
+Below are some warning signs that a project has created technical debt which a developer can better understand,
+
+-   Code smells are much more subtle than logic errors and indicate problems that are more likely to impact overall performance quality than cause a crash.
+-   Higher levels of complexity — when technologies overlap each other.
+-   Product bugs that will cause an entire system crash.
+-   Issues with coding style.
+
+At each detection, one should raise a red flag, declare bankruptcy on code and plan it out. Not everything would be do-able at once. Once should, document that in code itself via `TODO`, `FIXME` comment. Opening a ticket in tracking system to track for future. Add it to Product Backlog.
+
+Asking and Developing a coding style guide and sticking to it, will help to overcome few issue.
 
 #### Reactively bringing debt to notice
 
-https://en.wikipedia.org/wiki/Zeigarnik_effect
-
-#### Code for maintaining the debt
+One may not have idea before about a thing now, but over a period of time, one might understand a better way to do same thing. In such cases, developer would need declare EOL for such part/piece. It would be better to discuss things with team and propose the solution to help future selves.
 
 #### Huge documentation
 
-####
+Always rely on documentation, use it every where. As the saying goes, "if it is not documented, if was never done". Starting with small documentation of say, function also helps. Going furthur with entire design and thought process without documentation will certainly not help. A good developer always documents, whatever he can, not for others but for himself.
+
+#### Communication
+
+One of the most important steps to take in managing technical debt is to acknowledge that it exists in the first place and share that discovery with key stakeholders. It should be the responsibility of IT management to set the tone and communicate to non-IT managers about the true cost of technical debt. The head of IT must also explain the importance of paying down technical debt sooner rather later.
+
+#### Implementation
+
+There are three options to consider in terms of managing technical debt.
+
+Waive the requirement altogether. In other words, the organization decides to live with the system as it is and no longer deems the requirement as necessary. If you cannot waive the requirement, then you will need to refactor or replace the application.
+Refactor the application. This option is aimed at reducing complexity, removing duplicates and improving the structure of the code. Refactoring is the only way to improve a code’s internal structure without changing the behavior of the program.
+Replace the application. While this will introduce new technical debt, the idea is to address it quickly and minimize it as much possible.
+
+#### Tracking practices
+
+Experts recommend tracking your technical debt to keep it from getting too unwieldy. As the debts can survive multiple development cycles, tracking it is essential. Here’s how:
+
+Start a list of technical debts. (This includes all instances where the developers know the code isn’t as clean as it should or needs to be for future development.)
+List and group deferred tasks into workable units.
+Note the consequences of ignoring each unit.
+Keep the list visible.
+Inform teams that rely on delivery releases – like marketing, sales, etc. – that you’re working on technical debt, so that each new release cannot include only new features.
+Schedule regular and frequent time to pay off technical debt.
 
 ### Detecting and paying the debt regularly
 
@@ -112,4 +152,3 @@ Anything that is implemented today should take account of future requirment, if 
 When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
 
 ---
-
