@@ -27,58 +27,70 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 <!-- tocstop -->
 
-### First, What is this Technical Debt?
+### First, explanation to “if it’s not broke, don’t fix it” disease
 
-There may be multiple ways to define this jargon, to simple put it, `Technical debt`, in terms of software development, is implied cost of additional rework caused by choosing an easy solution rather than a known better approach/solution that would take longer time to implement. Sometimes this so called short cut, is either due to lack of time, lack of resources, urgency of cause, or simply monetary. Although it is not always avoidable but should be taken into account before moving ahead with development. As the article title says, "don't delay" rather than "don't keep" technical debt.
+“if it’s not broke, don’t fix it” paradigm is not a problem as such, but if that becomes a excuse/reason for all wrong things that are visible in a product/technical every now and then, that becomes a disease. For instance, Instagram nearly fell prey to these growing disease early on. When it launched its iPhone app in October 2010, it ran its operation off of a single server in Los Angeles. It worked without being "broken" for sometime. But after an onslaught of traffic nearly crashed the server, Instagram pivoted in three days to an EC2-hosted database. Co-founder Mike Krieger compared the transfer to open-heart surgery, and he now works to preemptively address technical debt before it leads to catastrophe.
 
-### Why can't debt be delayed?
+### Understanding the view of debt and making it purely technical
 
-Simply, debt always increases and most of the times in non-linear fashion.
+Like a glass that is half filled with liquid, someone would call it half empty. Both the 'view' of situation is correct. Someone would even extend it to say glass is full with half liquid and half air. But neither of view would helpful if there is a no answer to question of interest. Product team may never feel the need to take care of technical debt. If sufficient users are able use the system, what's the problem? If system is able to convert search to book ration in e-commerce site, where is the debt? If with every release, financial targets are being met, technical things should be good. Right? For most of such bird eye view questions, there is never a Yes - No answer.
 
-Debt, even in financial aspects as well should be cleared off as soon as possible and shouldn't be delayed. If you use a credit card for your financial needs, you will understand the burden that adds due to delay in the monthly payment of dues. Some credit card can add interest upto 13-15% monthly or 40% annually. But what if you end up paying the entire bill amount by end of payment cycle and do not delay it? No pain no harm. More delay equals more burden to your pocket.
+If we peek down over the system to the last point, we might get "Yes" and a "No" at different parts of system. But as explained in previous blog<insert previous blog> 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and unprofessionalism, and has no chance of paying of in the future. A mess is always a loss.
 
-Same is the case with technical debts. The difference being, no theoretical means can estimate the eventual interest piled up since not only money is involved but also human factor comes into play. For example, during prototyping you can probably opt for in-memory storage for things (say session storage for our case) or something similar considering time limitation. This is fine and perfect and would suffice the requirement. But development team would be aware of 'better solution', like in case, session storage to be on distributed object caching system like memcache, redis, etc. Now, prototype would work, would also end up in production after acceptance, time goes by, everything works fine for sometime. Eventually, things will start to show the 'debt'. Usage of in-memory would spread across layers because multiple developers worked on it, race conditions are hard to handle, session storage is acting as a cache for multiple flows, functions and other sharable things across layer are part of this 'in-memory' storage. With time, since your product has grown and also its users, it would require scaling, horizontally and vertically. But problem is now, its hard (not impossible) to change across layer and introduce distributed storage. What could had been done in days,is now estimated to be done in weeks. Plus some post damages in terms of regression bugs to fix them.
+A thumb rule used by me to differentiate between the two is, mess is result of laziness and unprofessionalism or lack of desire to make it look correct to oneself. While reasons for technical debt may differ (discussed below)
 
-### Product debt vs Technical debt
+While is is pretty easy and tempting to go back and forth and argue as to what does or does not constitute a ‘technical debt’ based on how it came about, I think it might be helpful to look at things slightly differently and not get so hung up on the intentions when you took out the loan etc.
 
-Understanding what part of missing piece is technical debt rather than product debt is essential. Let us consider this aspect with a product example. Consider this blog site, has set of limited articles(as of now). There is this feature associated with articles about approximate reading time like "~5 min read" or "10 min read", on blogging sites like medium/wordpress, which helps user to judge it. Either mark it as a bookmark, or keep it in one of hundred tabs in browser, or read it now, or get a coffee before starting to read, or simply move from chair to couch for comfortably reading it. It is established feature that helps the user on such a blogging site. Something like shown in the pic,
+### Examples for real life
 
-![Read length feature image](/img/post/dont-delay-time-feature.png 'Read length')
+### Why do technical debt occur?
 
-This blogging site does not have this feature for now (as of now, but will eventually). This is simple product debt and not technical. We may not choose it to implement at all. But learning that this is an urgent requirement, I may choose to implement it statically, i.e each article at the top would have static indication '10 min read' based on article length and average words read by user, say each 50 words add up to 1 minute. This implementation seems to be technical debt. Because I can on a heuristic manner, add this to each article.
+In a way it is the engineering trade-off’s that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
 
-Why is this technical debt? Because there is a better solution technically. Since each article is generated via static site generator - jekyll, a function can be implemented which takes post length, predict the reading time and associate it with each article. This is better for, 1. not rely on author understanding 2. Future proof to tweak this function.
+#### Time Constraint
 
-Seems a simple debt, but imagine if after 100 articles, for which I have been adding reading time manually and investing manual time in predicting the length, I learn that users of this blog actually work on different reading speed, say 100 words per minute. If done manually, I would need to account this, change all previous post (say 100) as per new math. Later we realise that this feature relies on the category of post, technical post with code, are low in reading time while verbose ones, have high reading time. Again this would require re-calculations for all post. This is a simple example of debt of changing each post everytime.
+#### Resource Issue
 
-Managing this feature for long term would be tedious since purpose of blog site was mainly articles. It would be better if a product feature itself was designed with future requirements governing technical aspects as well. A developer always pays and will need to pay their technical debts no matter what!
+#### Lack of knowledge
 
-Even though this is very small and basic example, re-work were also in magnitude of the technical debt. Simply, if you take 100$ as loan for a year with 10%, you will need to pay 10$ extra, while on same rate 20 million $ would require additional 2 million. Certainly, 10$ example is no match to 2million\$. But the discussion is not about interest but the rate, i.e 10%. However small, but would always be relative. Technical debt is like a loan. The longer you postpone paying it back, the more interest you pay, irrespective of small or big piece.
+#### Customer requirment
 
-### Side-effects
+### Developer To-do list
 
-Apart from monetary and time aspect that is pumped for technical debt, here are few other side effects that add up to the unwanted cause.
+#### Pro-active raising the red flag
 
-#### Frustrations and De-motivation for Development Teams
+    declaring bankruptcy on legacy code
 
-This is one of the biggest side-effect that generates over time. If couple of high issues keep adding, and technically product is not at 'state-of-the-art' level. Developer and teams working on such product often feel frustrated, and of course this frustration would result into other side effects. Nonetheless, it also demotivates and team takes a hit on its morale.
+#### Reactively bringing debt to notice
 
-#### “if it’s not broke, don’t fix it” disease
+https://en.wikipedia.org/wiki/Zeigarnik_effect
 
-If debt are huge, developer and in fact, teams hessit to clear up the huge task which was tiny in the beginning. This further results into 'turning a blind eye' behavior, not taking up issue unless it becomes a must fix. Final nail in the coffin is spread of this behavior/culture across devs, teams, orgs and company. For any organization, this is a huge cultural damage and hard to recover from.
+#### Code for maintaining the debt
 
-#### Prolonged design limitation
+#### Huge documentation
 
-A part of the entire system, if suffers from technical limitations, consumer of the service also suffer over long time. If core service (say authentication) can only handle 'x' api calls per minute, other parts of the product will need to design its feature in accordant manner. Thus, adding a design limitation to multiple service and product as a whole.
+####
 
-#### Reactive product development instead of proactive
+### Detecting and paying the debt regularly
 
-With legacy system, one has to always do work-arounds to accomplish and implement latest features and trending stuff. This pushes the product into reactive mode and takes away proactive product development mode, implying when the need would arise based on external forces things would be implemented.
+#### Regular health check up
+
+Health Checkups are must and should help you in understanding the state of system .If developers are taking longer than normal to iterate features or if you notice your product’s functionality and performance have taken a dive, it certainly raises red flag.
+
+#### Pay the minimum balance each week
+
+A good way to clean up things is to work continously on something that you want to have eventually. Regularly fixing those small debts will help is getting rid of major chunks.
+
+#### Cleanup team
+
+Having a team of developers who keep check on such task helps in the process. Even in Agile, you need a cleanup sprint. These group should help in both detecting and fixing things.
+
+#### Consider scalability/security/resilence in future decisions.
+
+Anything that is implemented today should take account of future requirment, if all requirements cannot be predicted, certain aspect has to be kept open so that unexpected requirement aren't a problem and system scales well.
 
 ---
 
-Technical debt are always compared in terms of numbers and finances, like in this post. But more then the calculated metrics, it is something that is beyond numbers. Something like health, the more prolonged bad state it has, the harder it becomes to recover, in fact sometimes it also becomes unrecoverable damage.
-
-So do you have any important tech-debt? Fix it now, because if it is not done now, it will probably never be done.
+When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
 
 ---
