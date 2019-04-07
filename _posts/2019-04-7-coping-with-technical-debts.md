@@ -142,3 +142,5 @@ Anything that is implemented today should take account of future requirment, if 
 When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
 
 ---
+
+Read the first part - [Don't delay your technical debts](/2019/03/10/dont-delay-technical-debts/)
