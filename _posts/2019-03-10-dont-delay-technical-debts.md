@@ -21,6 +21,8 @@ draft: false
 
 #### Part 1 of 2
 
+Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
+
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
 
 ### Table of contents
@@ -93,3 +95,5 @@ Technical debt are always compared in terms of numbers and finances, like in thi
 So do you have any important tech-debt? Fix it now, because if it is not done now, it will probably never be done.
 
 ---
+
+Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
