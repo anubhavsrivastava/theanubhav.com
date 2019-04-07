@@ -19,6 +19,8 @@ draft: false
 
 #### Part 2 of 2
 
+Read the first part - [Don't delay your technical debts](/2019/03/10/dont-delay-technical-debts/)
+
 Following article would explain most of scenarios with regards to frontend/web development but simply can be applied as in general software development.
 
 ### Table of contents
@@ -51,7 +53,7 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 Like a glass that is half filled with liquid, someone would call it half empty. Both the 'view' of situation is correct. Someone would even extend it to say glass is full with half liquid and half air. But neither of view would helpful if there is a no answer to question of interest. Product team may never feel the need to take care of technical debt. If sufficient users are able use the system, what's the problem? If system is able to convert search to book ration in e-commerce site, where is the debt? If with every release, financial targets are being met, technical things should be good. Right? For most of such bird eye view questions, there is never a Yes - No answer.
 
-If we peek down over the system to the last point, we might get "Yes" and a "No" at different parts of system. But as explained in previous blog<insert previous blog> 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and unprofessionalism, and has no chance of paying of in the future. A mess is always a loss.
+If we peek down over the system to the last point, we might get "Yes" and a "No" at different parts of system. But as explained in [previous blog](/2019/03/10/dont-delay-technical-debts/) 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and unprofessionalism, and has no chance of paying of in the future. A mess is always a loss.
 
 A thumb rule used by me to differentiate between the two is, mess is result of laziness and unprofessionalism or lack of desire to make it look correct to oneself. In a way tech debt is the engineering trade-off’s that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
 
@@ -99,21 +101,22 @@ Always rely on documentation, use it every where. As the saying goes, "if it is 
 
 #### Implementation considerations
 
-There are three options to consider in terms of managing technical debt.
+There are three options to consider in terms of managing technical debt during development.
 
--   Waive the requirement altogether. In other words, the organization decides to live with the system as it is and no longer deems the requirement as necessary. If you cannot waive the requirement, then you will need to refactor or replace the application.
+-   Waive the requirement altogether. In other words, let the non technical people know about the trade off so that the organization decides to live with the system as it is and no longer deems the requirement as necessary. If you cannot waive the requirement, then you will need to refactor or replace the application.
 -   Refactor the application. This option is aimed at reducing complexity, removing duplicates and improving the structure of the code. Refactoring is the only way to improve a code’s internal structure without changing the behavior of the program.
--   Replace the application. While this will introduce new technical debt, the idea is to address it quickly and minimize it as much possible.
+-   Replace the application. While this will introduce new technical debt, the idea is to address it quickly and minimize it as much possible. This is at most cases, beyond control of developer.
 
 #### Tracking practices
 
-Experts recommend tracking your technical debt to keep it from getting too unwieldy. As the debts can survive multiple development cycles, tracking it is essential. Here’s how:
+As the debts can survive multiple development cycles, tracking it is crucial. Here’s quick list to follow,
 
-Start a list of technical debts. (This includes all instances where the developers know the code isn’t as clean as it should or needs to be for future development.)
-List and group deferred tasks into workable units.
-Note the consequences of ignoring each unit.
-Keep the list visible.
-Inform teams that rely on delivery releases – like marketing, sales, etc. – that you’re working on technical debt, so that each new release cannot include only new features.
+-   Maintain list of technical debts. (This includes all instances where the developers know the code isn’t as clean as it should or needs to be for future development.)
+-   Segregate and group deferred tasks into workable chunks.
+-   Note the consequences of ignoring each chunk.
+-   Keep the list transparent and visible.
+-   Inform teams that rely on delivery releases
+
 Schedule regular and frequent time to pay off technical debt.
 
 ### Detecting and paying the debt regularly as a team
