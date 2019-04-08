@@ -63,7 +63,7 @@ While is is pretty easy and tempting to go back and forth and argue as to what d
 
 Some Development Teams fall victim to the way that ‘the business’ keeps prioritizing new features over improving the codebase, while on the other hand holding them responsible for bugs, broken code and the results of technical debt. The Development Team can do no right in that case. But a clear communication to stakeholders will certainly help. Here are list of things one can do as a dev,
 
-#### Life choices in developemtn
+#### Life choices in development
 
 As a software developer, you have to add a new functionality to a software or system. There are two paths to choose:
 
