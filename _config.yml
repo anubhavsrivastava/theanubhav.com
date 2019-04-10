@@ -8,8 +8,8 @@
 #baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
-url: 'http://anubhavsrivastava.github.io/theanubhav.com'
-hostURL: 'http://theanubhav.com'
+url: 'https://anubhavsrivastava.github.io/theanubhav.com'
+hostURL: 'https://theanubhav.com'
 baseurl: ''
 
 # Of course don't forget to change the username and projectname to YOUR username and project
@@ -25,12 +25,13 @@ description: Anubhav Srivastava's Personal Blog!
 show_title: false
 # List of links in the navigation bar
 navbar-links:
-    About Me: 'http://about.theanubhav.com'
+    Dev Tips: 'https://devtips.theanubhav.com'
+    About Me: 'https://about.theanubhav.com'
     # Resources:
-    # - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    # - Learn markdown: "http://www.markdowntutorial.com/"
+    # - Beautiful Jekyll: "https://deanattali.com/beautiful-jekyll/"
+    # - Learn markdown: "https://www.markdowntutorial.com/"
     # - GitHub Pages: "https://pages.github.com/"
-    # Author's home: "http://deanattali.com"
+    # Author's home: "https://deanattali.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
