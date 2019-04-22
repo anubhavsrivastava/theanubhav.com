@@ -196,7 +196,7 @@ The approach here is to create a higher order function, which would take a funct
     function fixCurry(fn, totalArgs){
         totalArgs = totalArgs ||fn.length
             return function recursor(){
-                return arguments.length<fn.length?recursor.bind(this, ...arguments): fn.call(this, ...arguments);
+                return arguments.length<totalArgs?recursor.bind(this, ...arguments): fn.call(this, ...arguments);
             }
     }
 
