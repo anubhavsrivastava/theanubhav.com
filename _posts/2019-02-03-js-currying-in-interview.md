@@ -77,7 +77,7 @@ Few variations in this currying problem may also be seen floating around
 
 #### `add(2)(3)(4)...`, for endless number of parameters
 
-Hmmm, we know how to handle the summation and returning function (along with closure) but we arent sure when to stop, which implies, when would primary function return the result and when would it reture another curried function. There are possibily two options,
+Hmm, we know how to handle the summation and returning function (along with closure) but we aren't sure when to stop, which implies, when would primary function return the result and when would it return another curried function. There are possibly two options,
 
 ##### 1. Making use of `valueOf` property
 
@@ -152,7 +152,7 @@ This could be used in following manner,
 
     > add(2)(3)() //output: 5
     > var t = add(3)(4)(5)
-    > t() //ouput: 12
+    > t() //output: 12
 
 #### `add(2)(3)(4) and add(2,3,4)` usage in same function.
 
@@ -229,7 +229,7 @@ Another thing to note with `add` and `multiply` example is, addition and multipl
 -   [`add(2)(3)` implementation in JS.](https://gist.github.com/anubhavsrivastava/9baa61b12abe8d8a952f762f886e477b)
 -   [`add(2)(3)(4)...` via valueOf.](https://gist.github.com/anubhavsrivastava/d178cb41a11795a078a327e3d9e3635c)
 -   [`add(2)(3)(4)...` via explicit result property.](https://gist.github.com/anubhavsrivastava/6772d1a69d2581d9db2b8b742adb7beb)
--   [`add(2)(3)...` via explicit argumentless call](https://gist.github.com/anubhavsrivastava/b6301e95b7b405b6fb548a194a7c20f4)
+-   [`add(2)(3)...` via explicit argument less call](https://gist.github.com/anubhavsrivastava/b6301e95b7b405b6fb548a194a7c20f4)
 -   [`add(2)(3)(4) with add(2,3,4)` via argument count](https://gist.github.com/anubhavsrivastava/50236dde3561454708d57830398b1226)
 -   [`add(2)(3)(4) with add(2,3,4)` , generic solution](https://gist.github.com/anubhavsrivastava/d02e115f321de4852942c31627e33e0d)
 
