@@ -62,7 +62,7 @@ Yes, and to make it true one can do this,
 
     console.log(a==1 && a==2 && a==3); //true
 
-The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the `==` comparitor behave strangely.
+The purpose of a question like this in interview, isn't to know the answer to the brain-teaser, so much as to get a feel for how the interviewee thinks through problems, and whether they have awareness of the kinds of features and oddities of JS that can make the `==` comparison behave strangely.
 
 #### Explanation
 
@@ -91,7 +91,7 @@ If PreferredType is String, steps 2 and 3 are swapped.
 The PreferredType can also be omitted; it is then considered to be String for dates and Number for all other values.
 The default implementation of `valueOf()` returns `this`, while the default implementation of `toString()` returns type information.
 
-This is how the operators + and == call `ToPrimitive()`. (Ahaa! )
+This is how the operators + and == call `ToPrimitive()`. (Aha! )
 
 So in above code, as soon as JS saw, `a==1`, '1' being primitive type it tried to convert 'a' to Number, and with above algorithm, `a.valueOf` was called returning '1' (incrementing previous value for and returning it).
 Similar coercion came into effect for `a==2` and `a==3` thus incrementing it for next time.
@@ -115,7 +115,7 @@ Yes, below code would make this true,
 
 #### Explanation
 
-Our understanding from previous problem is, primitive values would never satisfy above condition, we need by some means call a function and inside that function we can perform this magic. But calling a function would involve `()` after function name. hmmm. strange.
+Our understanding from previous problem is, primitive values would never satisfy above condition, we need by some means call a function and inside that function we can perform this magic. But calling a function would involve `()` after function name. hmm... strange.
 But since there is no loose equality, .valueOf won't be called by JS Engine, bringing function `Property`, especially `getter`, to the rescue.
 
 ##### What are property descriptors?
