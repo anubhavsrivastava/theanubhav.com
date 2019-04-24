@@ -41,7 +41,7 @@ Following article would explain most of scenarios with regards to frontend/web d
     -   [Regular health check up](#regular-health-check-up)
     -   [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
     -   [Cleanup team](#cleanup-team)
-    -   [Consider scalability/security/resilence in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
+    -   [Consider scalability/security/resilience in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
 
 <!-- tocstop -->
 
@@ -53,9 +53,9 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 Like a glass that is half filled with liquid, someone would call it half empty. Both the 'view' of situation is correct. Someone would even extend it to say the glass is full with half liquid and half air. But neither of views would helpful if there is no answer to the question of interest. Product team may never feel the need to take care of technical debt. If sufficient users are able to use the system, what's the problem? If the system is able to convert search-to-book ratio in e-commerce site, where is the debt? If with every release, financial targets are being met, technical things should be good. Right? For most of such bird eye view questions, there is never a Yes - No answer.
 
-If we peek down over the system to the last point, we might get "Yes" and "No" at different parts of the system. But as explained in [previous blog](/2019/03/10/dont-delay-technical-debts/) 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and unprofessionalism, and has no chance of paying off in the future. A mess is always a loss.
+If we peek down over the system to the last point, we might get "Yes" and "No" at different parts of the system. But as explained in [previous blog](/2019/03/10/dont-delay-technical-debts/) 'Product and Technical Debts' are different view. An addition to technical part is `Design/Architecture Debt` or `Code Debt` or any part you may break it. Code mess is not debt, it is a loss. And there are various development practices to take care of it. Following team guidelines, using Linter, code reviews, design reviews and other mediums to tackle this mess. The decision to make a mess is never rational, is always based on laziness and un-professionalism, and has no chance of paying off in the future. A mess is always a loss.
 
-A thumb rule used by me to differentiate between the two is, mess is the result of laziness and unprofessionalism or lack of desire to make it look correct to oneself. In a way tech debt is the engineering trade-off’s that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
+A thumb rule used by me to differentiate between the two is, mess is the result of laziness and un-professionalism or lack of desire to make it look correct to oneself. In a way tech debt is the engineering trade-off that software developers and business stakeholders must often make in order to meet schedules and customer expectations. Technical debt decisions are made based on real project constraints. They are risky, but they can be beneficial.
 
 While is is pretty easy and tempting to go back and forth and argue as to what does or does not constitute a ‘technical debt’ based on how it came about, I think it might be helpful to look at things slightly differently and not get so hung up on the intentions when you took out the loan etc.
 
@@ -75,7 +75,7 @@ Choose a path such that after sometime, result is same as one coming from "harde
 #### Use Code Metrics to quantify Technical Debt
 
 Metrics offer a wonderful opportunity to make something subjective and abstract more objective and tangible. It also gives you a measurable goal to improve towards.
-Cyclomatic complexity, Code coverage, Continuous Integration, Cost of Delay,
+Cyclometric complexity, Code coverage, Continuous Integration, Cost of Delay,
 Bug count, etc. Make sure you set up things so that you can measure them and also analyse them on a timely basis.
 
 #### Pro-active raising the red flag
@@ -92,7 +92,7 @@ Asking and Developing a coding style guide and sticking to it, will help to over
 
 #### Reactively bringing debt to notice and communicating
 
-One may not have idea beforehand about a thing, but over a period of time, one might understand a better way to do thesame thing. Thus sensing some debts. In such cases, developer should declare EOL for such part/piece. It would be better to discuss things with team and propose the solution to help future selves. As a team,
+One may not have idea beforehand about a thing, but over a period of time, one might understand a better way to do the same thing. Thus sensing some debts. In such cases, developer should declare EOL for such part/piece. It would be better to discuss things with team and propose the solution to help future selves. As a team,
 one of the most important steps to take in managing technical debt is to acknowledge that it exists in the first place and share that discovery with key stakeholders. It should be the responsibility of technical management to set the tone and communicate to non-technical managers about the true cost of technical debt. The head must also explain the importance of paying down technical debt sooner rather than later.
 
 #### Continuous documentation
