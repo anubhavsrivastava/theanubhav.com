@@ -19,7 +19,7 @@ Following section shall shed some more light on the newly available meta-propert
 -   [What is new.target](#what-is-newtarget)
 -   [`new.target` as per specification](#newtarget-as-per-specification)
 -   [Primary points](#primary-points)
-    -   [Contructor functions/methods](#contructor-functionsmethods)
+    -   [Constructor functions/methods](#constructor-functionsmethods)
     -   [Problem with `this`](#problem-with-this)
     -   [Typical Solution - Using strict mode](#typical-solution---using-strict-mode-use-strict)
     -   [Use Cases](#suse-cases)
@@ -38,7 +38,7 @@ The `new.target` property lets you find if, a function or constructor was called
 
 ## `new.target` as per specification
 
-`newTarget` is meta-property and is not a function. Its value is the function, if its called with `new` keyword else it is `undefined`. In official specification, it is referred as 'Runtime Sementics' and returns [GetNewTarget()](http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties).
+`newTarget` is meta-property and is not a function. Its value is the function, if its called with `new` keyword else it is `undefined`. In official specification, it is referred as 'Runtime Semantics' and returns [GetNewTarget()](http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties).
 
 ---
 
@@ -46,7 +46,7 @@ The `new.target` property lets you find if, a function or constructor was called
 
 Before going into usage of `newTarget`, let us consider following few points,
 
-### Contructor functions/methods
+### Constructor functions/methods
 
 You can invoke a constructor function via the `new` operator, then only it becomes a constructor, a factory for objects. By convention, the names of constructors start with uppercase letters.
 A example implementation of Constructor function. We shall use this in further discussion.
@@ -208,7 +208,7 @@ Simply, no because
 -   So, for one thing, finally enables us to detect whether a function was called as a constructor or not.
 
 But that's not its actual purpose.It is part of the way how ES6 classes are not only syntactic sugar, and how they allow us inheriting from builtin objects.
-When you call a class constructor via new X, the this value is not yet initialised - the object is not yet created when the constructor body is entered. It does get created by the super constructor during the super() call (which is necessary when internal slots are supposed to be created). Still, the instance should inherit from the .prototype of the originally called constructor, and that's where newTarget comes into the play. It does hold the "outermost" constructor that received the new call during super() invocations. You can follow it all the way down in the spec, but basically it always is the newTarget not the currently executed constructor that does get passed into the new.target.
+When you call a class constructor via new X, the this value is not yet initialized - the object is not yet created when the constructor body is entered. It does get created by the super constructor during the super() call (which is necessary when internal slots are supposed to be created). Still, the instance should inherit from the .prototype of the originally called constructor, and that's where newTarget comes into the play. It does hold the "outermost" constructor that received the new call during super() invocations. You can follow it all the way down in the spec, but basically it always is the newTarget not the currently executed constructor that does get passed into the new.target.
 
 {% highlight javascript linenos %}
 function Parent(){
