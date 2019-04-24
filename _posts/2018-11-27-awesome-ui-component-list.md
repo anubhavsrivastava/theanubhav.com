@@ -33,7 +33,7 @@ draft: false
 
 _[aw-suh m lists]_
 
--   An internet phenomenom
+-   An internet phenomenon
 -   Curated lists of awesome links around a specific topic.
 -   Created and kept up to date by amazing people.
 -   Fantastic learning and inspiration resource
@@ -123,7 +123,7 @@ It is a way in which OSS community curate and collaborate on list of awesome stu
 
 -   [AT-UI](https://at.aotu.io/) [![Repo Star](https://img.shields.io/github/stars/at-ui/at-ui.svg?label=&style=social)](https://github.com/at-ui/at-ui) - A fresh and flat UI-Kit specially for desktop application
 -   [Bootstrap Vue](https://bootstrap-vue.js.org/) [![Repo Star](https://img.shields.io/github/stars/bootstrap-vue/bootstrap-vue.svg?label=&style=social)](https://github.com/bootstrap-vue/bootstrap-vue) - comprehensive implementations of Bootstrap 4 components and grid system for Vue.js and with extensive and automated WAI-ARIA accessibility markup.
--   [Buefy](https://buefy.github.io/) [![Repo Star](https://img.shields.io/github/stars/buefy/buefy.svg?label=&style=social)](https://github.com/buefy/buefy) - Lightweight UI components for Vue.js based on Bulma, which are the library’s only two internal dependancies
+-   [Buefy](https://buefy.github.io/) [![Repo Star](https://img.shields.io/github/stars/buefy/buefy.svg?label=&style=social)](https://github.com/buefy/buefy) - Lightweight UI components for Vue.js based on Bulma, which are the library’s only two internal dependencies
 -   [Cube UI](https://didi.github.io/cube-ui/#/en-US) [![Repo Star](https://img.shields.io/github/stars/didi/cube-ui.svg?label=&style=social)](https://github.com/didi/cube-ui) - cube-ui is a UI component library for mobile apps
 -   [Element](https://element.eleme.io/) [![Repo Star](https://img.shields.io/github/stars/ElemeFE/element.svg?label=&style=social)](https://github.com/ElemeFE/element) - Library provides a rich selection of customizable components along with a full style-guide based on Vue 2.0
 -   [Fish-UI](https://myliang.github.io/fish-ui/) [![Repo Star](https://img.shields.io/github/stars/myliang/fish-ui.svg?label=&style=social)](https://github.com/myliang/fish-ui) - provides a Vue-based web toolkit with neat and clean looking components. The library supports a ES2015 + Webpack workflow
@@ -162,7 +162,7 @@ It is a way in which OSS community curate and collaborate on list of awesome stu
 -   [Element](https://element-angular.faas.ele.me/) [![Repo Star](https://img.shields.io/github/stars/ElemeFE/element-angular.svg?label=&style=social)](https://github.com/ElemeFE/element-angular) - Initially build for VueJs, Library provides a rich selection of customizable components along with a full style-guide
 -   [NG Bootstrap](https://ng-bootstrap.github.io/) [![Repo Star](https://img.shields.io/github/stars/ng-bootstrap/ng-bootstrap.svg?label=&style=social)](https://github.com/ng-bootstrap/ng-bootstrap) - replacing [angular-ui](https://github.com/angular-ui/bootstrap) bootstrap which is no longer maintained, it provides Bootstrap 4 components for Angular with no 3rd party JS dependencies
 -   [NGX Bootstrap](https://valor-software.com/ngx-bootstrap/#/) [![Repo Star](https://img.shields.io/github/stars/valor-software/ngx-bootstrap.svg?label=&style=social)](https://github.com/valor-software/ngx-bootstrap) - Bootstrap 3/Bootstrap 4 Components with Angular, for both Mobile and Desktop.
--   [NG Lightning](http://ng-lightning.github.io/ng-lightning/) [![Repo Star](https://img.shields.io/github/stars/ng-lightning/ng-lightning.svg?label=&style=social)](https://github.com/ng-lightning/ng-lightning) - Angular components built for the Saleforce Lightning Design System
+-   [NG Lightning](http://ng-lightning.github.io/ng-lightning/) [![Repo Star](https://img.shields.io/github/stars/ng-lightning/ng-lightning.svg?label=&style=social)](https://github.com/ng-lightning/ng-lightning) - Angular components built for the Salesforce Lightning Design System
 -   [NG Semantic-UI](https://ng-semantic.herokuapp.com/) [![Repo Star](https://img.shields.io/github/stars/vladotesanovic/ngSemantic.svg?label=&style=social)](https://github.com/vladotesanovic/ngSemantic) - Angular UI building blocks based on Semantic-UI
 -   [NG-ZORRO](https://ng.ant.design/?p=/docs/introduce/en) [![Repo Star](https://img.shields.io/github/stars/NG-ZORRO/ng-zorro-antd.svg?label=&style=social)](https://github.com/NG-ZORRO/ng-zorro-antd) - NG-ZORRO components aim to provide an enterprise-class UI based on Ant Design
 -   [Material 2](https://material.angular.io/) [![Repo Star](https://img.shields.io/github/stars/angular/material2.svg?label=&style=social)](https://github.com/angular/material2) - Angular’s official component library implementing Google’s material design, built with Angular and TypeScript
