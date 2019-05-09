@@ -3,11 +3,18 @@ layout: post
 title: Understanding meta-property - newTarget
 subtitle: Digging deep into newTarget - `new.target` from ECMAScript 2015 (aka ES6)
 avatar: /img/avatars/avatar-js.png
-gist: ECMAScript 2015 has introduced a new meta-property or expression known as `new.target` (or `newTarget`);  'new' keyword followed by dot(.) and then `target`. Here is a primer on what it is and how to make use of it.
-categories: [JavaScript]
-tag: [ES2015, ES6, ECMASCRIPT2015, JavaScript]
+gist: >-
+  ECMAScript 2015 has introduced a new meta-property or expression known as
+  `new.target` (or `newTarget`);  'new' keyword followed by dot(.) and then
+  `target`. Here is a primer on what it is and how to make use of it.
+categories:
+  - JavaScript
+tag:
+  - ES2015
+  - ES6
+  - ECMASCRIPT2015
+  - JavaScript
 ---
-
 `new.target` is one of newly introduced meta-properties that have made it to ECMAScript/JavaScript. It is also known as `newTarget` in official [ES2015 specifications](http://www.ecma-international.org/ecma-262/6.0/#sec-meta-properties). It lets you detect whether a function (constructor function) was called with `new` keyword or not.
 
 ---
@@ -305,3 +312,4 @@ This is not polyfill-able property, as it is token/expression and uses property 
 For the interested species, refer [meeting notes from ES discussion](https://esdiscuss.org/notes/2015-01-27) on `newTarget`
 
 ---
+

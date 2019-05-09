@@ -1,42 +1,40 @@
 ---
 layout: post
 title: >-
-    Currying in JS: Answering the traditional question, Add(2)(3), which gives sum
-    of both numbers.
+  Currying in JS: Answering the traditional question, Add(2)(3), which gives sum
+  of both numbers.
 subtitle: >-
-    Understanding concept of currying and in depth analysis of most frequent
-    interview questions around it
+  Understanding concept of currying and in depth analysis of most frequent
+  interview questions around it
 avatar: /img/avatars/avatar-js.png
 gist: >-
-    We will have a look at concepts that revolve around this question and
-    progressively take it to next level.
+  We will have a look at concepts that revolve around this question and
+  progressively take it to next level.
 categories:
-    - JavaScript
-    - JS
-    - Questions
+  - JavaScript
+  - JS
+  - Questions
 tag:
-    - JavaScript
-    - Interview-Questions
+  - JavaScript
+  - Interview-Questions
 draft: false
 ---
-
 ### Table of contents
 
 <!-- toc -->
 
--   [First, Implement `add(2)(3)` in JavaScript](#first-implement-add23-in-javascript)
--   [What is currying?](#what-is-currying)
--   [Variants of add(2)(3) problem](#variants-of-add23-problem)
-    -   [`add(2)(3)(4)...`, for endless number of parameters](#add234-for-endless-number-of-parameters)
-        -   [1. Making use of `valueOf` property](#1-making-use-of-valueof-property)
-        -   [2. Explicit call to a property](#2-explicit-call-to-a-property)
-        -   [3. Explicit call to function with no arguments for final result](#3-explicit-call-to-function-with-no-arguments-for-final-result)
-    -   [`add(2)(3)(4) and add(2,3,4)` usage in same function.](#add234-and-add234-usage-in-same-function)
-        -   [1. Solution using `arguments` count](#1-solution-using-arguments-count)
-        -   [2. Generic solution for fixed argument function](#2-generic-solution-for-fixed-argument-function)
-
-*   [Github Gist](#github-gist)
-*   [References](#references)
+  * [First, Implement `add(2)(3)` in JavaScript](#first-implement-add23-in-javascript)
+  * [What is currying?](#what-is-currying)
+  * [Variants of add(2)(3) problem](#variants-of-add23-problem)
+    + [`add(2)(3)(4)...`, for endless number of parameters](#add234-for-endless-number-of-parameters)
+      - [1. Making use of `valueOf` property](#1-making-use-of-valueof-property)
+      - [2. Explicit call to a property](#2-explicit-call-to-a-property)
+      - [3. Explicit call to function with no arguments for final result](#3-explicit-call-to-function-with-no-arguments-for-final-result)
+    + [`add(2)(3)(4) and add(2,3,4)` usage in same function.](#add234-and-add234-usage-in-same-function)
+      - [1. Solution using `arguments` count](#1-solution-using-arguments-count)
+      - [2. Generic solution for fixed argument function](#2-generic-solution-for-fixed-argument-function)
+- [Github Gist](#github-gist)
+- [References](#references)
 
 <!-- tocstop -->
 
@@ -238,3 +236,4 @@ Another thing to note with `add` and `multiply` example is, addition and multipl
 -   [Article - Currying the callback, or the essence of futures](https://bjouhier.wordpress.com/2011/04/04/currying-the-callback-or-the-essence-of-futures/)
 
 ---
+

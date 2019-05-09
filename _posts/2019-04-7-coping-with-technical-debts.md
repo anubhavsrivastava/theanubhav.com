@@ -4,19 +4,18 @@ title: Coping up with technical debts as a developer!
 subtitle: Understanding developer's take on technical debt and things around it.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-    Technical debt may be necessary in products, but how one keep a check on it
-    and happily track it.
+  Technical debt may be necessary in products, but how one keep a check on it
+  and happily track it.
 categories:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 tag:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 draft: false
 ---
-
 #### Part 2 of 2
 
 Read the first part - [Don't delay your technical debts](/2019/03/10/dont-delay-technical-debts/)
@@ -27,21 +26,21 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 <!-- toc -->
 
--   [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
--   [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
--   [Developer To-do list](#developer-to-do-list)
-    -   [Life choices](#life-choices)
-    -   [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
-    -   [Reactively bringing debt to notice](#reactively-bringing-debt-to-notice)
-    -   [Huge documentation](#huge-documentation)
-    -   [Communication](#communication)
-    -   [Implementation](#implementation)
-    -   [Tracking practices](#tracking-practices)
--   [Detecting and paying the debt regularly](#detecting-and-paying-the-debt-regularly)
-    -   [Regular health check up](#regular-health-check-up)
-    -   [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
-    -   [Cleanup team](#cleanup-team)
-    -   [Consider scalability/security/resilience in future decisions.](#consider-scalabilitysecurityresilence-in-future-decisions)
+- [First, explanation to “if it’s not broke, don’t fix it” disease](#first-explanation-to-if-its-not-broke-dont-fix-it-disease)
+- [Understanding the view of debt and making it purely technical](#understanding-the-view-of-debt-and-making-it-purely-technical)
+- [Developer To-do list](#developer-to-do-list)
+  * [Life choices in development](#life-choices-in-development)
+  * [Use Code Metrics to quantify Technical Debt](#use-code-metrics-to-quantify-technical-debt)
+  * [Pro-active raising the red flag](#pro-active-raising-the-red-flag)
+  * [Reactively bringing debt to notice and communicating](#reactively-bringing-debt-to-notice-and-communicating)
+  * [Continuous documentation](#continuous-documentation)
+  * [Implementation considerations](#implementation-considerations)
+  * [Tracking practices](#tracking-practices)
+- [Detecting and paying the debt regularly as a team](#detecting-and-paying-the-debt-regularly-as-a-team)
+  * [Regular health check up](#regular-health-check-up)
+  * [Pay the minimum balance each week](#pay-the-minimum-balance-each-week)
+  * [Cleanup team](#cleanup-team)
+  * [Consider scalability/security/resilience for future decisions.](#consider-scalabilitysecurityresilience-for-future-decisions)
 
 <!-- tocstop -->
 
@@ -144,3 +143,4 @@ When you decide to take on a technical debt, you had better make sure that your 
 ---
 
 Read the first part - [Don't delay your technical debts](/2019/03/10/dont-delay-technical-debts/)
+

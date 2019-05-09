@@ -2,23 +2,22 @@
 layout: post
 title: Don't delay your technical debts!
 subtitle: >-
-    // Todo, the foundation of your future technical limitation and frustration
-    that you planned today.
+  // Todo, the foundation of your future technical limitation and frustration
+  that you planned today.
 avatar: /img/avatars/avatar-code.png
 gist: >-
-    The author feels that gist of this article can be written down some other day
-    due to shortage of time and would like to  add the technical debt!
+  The author feels that gist of this article can be written down some other day
+  due to shortage of time and would like to  add the technical debt!
 categories:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 tag:
-    - TechTalk
-    - TechDebt
-    - Opinion
+  - TechTalk
+  - TechDebt
+  - Opinion
 draft: false
 ---
-
 #### Part 1 of 2
 
 Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
@@ -29,14 +28,14 @@ Following article would explain most of scenarios with regards to frontend/web d
 
 <!-- toc -->
 
--   [First, What is this Technical Debt?](#first-what-is-this-technical-debt)
--   [Why can't debt be delayed?](#why-cant-debt-be-delayed)
--   [Product debt vs Technical debt](#product-debt-vs-technical-debt)
--   [Side-effects](#side-effects)
-    -   [Frustrations and De-motivation for Development Teams.](#frustrations-and-de-motivation-for-development-teams)
-    -   [“if it’s not broke, don’t fix it” disease.](#if-its-not-broke-dont-fix-it-disease)
-    -   [Prolonged design limitation](#prolonged-design-limitation)
-    -   [Reactive product developement instead of proactive.](#reactive-product-developement-instead-of-proactive)
+- [First, What is this Technical Debt?](#first-what-is-this-technical-debt)
+- [Why can't debt be delayed?](#why-cant-debt-be-delayed)
+- [Product debt vs Technical debt](#product-debt-vs-technical-debt)
+- [Side-effects](#side-effects)
+  * [Frustrations and De-motivation for Development Teams](#frustrations-and-de-motivation-for-development-teams)
+  * [“if it’s not broke, don’t fix it” disease](#if-its-not-broke-dont-fix-it-disease)
+  * [Prolonged design limitation](#prolonged-design-limitation)
+  * [Reactive product development instead of proactive](#reactive-product-development-instead-of-proactive)
 
 <!-- tocstop -->
 
@@ -97,3 +96,4 @@ So do you have any important tech-debt? Fix it now, because if it is not done no
 ---
 
 Read the second part - [Coping up with technical debts](/2019/04/07/coping-with-technical-debts/)
+

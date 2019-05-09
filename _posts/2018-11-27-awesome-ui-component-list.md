@@ -1,30 +1,29 @@
 ---
 layout: post
-title: >-
-    Awesome list (of github) for UI Component Libraries based on UI Toolkits
+title: Awesome list (of github) for UI Component Libraries based on UI Toolkits
 subtitle: >-
-    Curated list of things for UI Component of React, Angular, Ember, Vue and Mithril JS for Open source community
+  Curated list of things for UI Component of React, Angular, Ember, Vue and
+  Mithril JS for Open source community
 avatar: /img/avatars/avatar-gh.png
 gh-repo: anubhavsrivastava/awesome-ui-component-library
 gh-badge:
-    - fork
-    - star
-    - watch
-    - follow
+  - fork
+  - star
+  - watch
+  - follow
 gist: >-
-    The great thing about awesome-x is that there is one place to go to find all things awesome.
-    An awesome list is a list of awesome things curated by the community.
+  The great thing about awesome-x is that there is one place to go to find all
+  things awesome. An awesome list is a list of awesome things curated by the
+  community.
 categories:
-    - awesome
-    - awesome-list
+  - awesome
+  - awesome-list
 tag:
-    - awesome
-    - awesome-list
-    - uikit
-
+  - awesome
+  - awesome-list
+  - uikit
 draft: false
 ---
-
 <div align="center">
 	<img  src="/img/avatars/avatar-awesome.png" alt="Awesome" />
 </div>
@@ -56,18 +55,19 @@ It is a way in which OSS community curate and collaborate on list of awesome stu
 
 <!-- toc -->
 
--   [React](#react)
-    -   [Special use case libraries](#special-use-case-libraries)
-    -   [Related community list](#related-community-list)
--   [VueJS](#vuejs)
-    -   [Related community list](#related-community-list-1)
--   [Angular](#angular)
-    -   [Special use case libraries](#special-use-case-libraries-1)
-    -   [Related community list](#related-community-list-2)
--   [EmberJS](#emberjs)
-    -   [Related community list](#related-community-list-3)
--   [Polymer](#polymer)
-    -   [Related community list](#related-community-list-4)
+- [React](#react)
+  * [Special use case libraries](#special-use-case-libraries)
+  * [Related community list](#related-community-list)
+- [VueJS](#vuejs)
+  * [Related community list](#related-community-list-1)
+- [Angular](#angular)
+  * [Special use case libraries](#special-use-case-libraries-1)
+  * [Related community list](#related-community-list-2)
+- [EmberJS](#emberjs)
+  * [Special use case libraries](#special-use-case-libraries-2)
+  * [Related community list](#related-community-list-3)
+- [Mithril](#mithril)
+  * [Related community list](#related-community-list-4)
 
 <!-- tocstop -->
 
@@ -218,3 +218,4 @@ It is a way in which OSS community curate and collaborate on list of awesome stu
 End of List \m/
 
 Please refer [original repo](https://github.com/anubhavsrivastava/awesome-ui-component-library) for latest version of this list
+

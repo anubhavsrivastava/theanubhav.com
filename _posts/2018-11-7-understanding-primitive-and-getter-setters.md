@@ -1,26 +1,25 @@
 ---
 layout: post
 title: >-
-    Will <code>(a===1 && a===2 && a===3)</code> (strict comparison) ever be true
-    (in JavaScript)
+  Will <code>(a===1 && a===2 && a===3)</code> (strict comparison) ever be true
+  (in JavaScript)
 subtitle: >-
-    Extension to traditional JavaScript problem <strong>(a==1 && a==2 &&
-    a==3)</strong> (loose equality) and its solution
+  Extension to traditional JavaScript problem <strong>(a==1 && a==2 &&
+  a==3)</strong> (loose equality) and its solution
 avatar: /img/avatars/avatar-js.png
 gist: >-
-    Let's understand how can we make  <strong>(a===1 && a===2 && a===3)</strong>
-    to ever be true considering `===` operator, with help of getter-setter
-    descriptors.
+  Let's understand how can we make  <strong>(a===1 && a===2 && a===3)</strong>
+  to ever be true considering `===` operator, with help of getter-setter
+  descriptors.
 categories:
-    - JavaScript
-    - JS
-    - Questions
+  - JavaScript
+  - JS
+  - Questions
 tag:
-    - JavaScript
-    - Interview-Questions
+  - JavaScript
+  - Interview-Questions
 draft: false
 ---
-
 ## Let's understand how can we make `(a===1 && a===2 && a===3)` to ever be true with help of getter-setter descriptors.
 
 We shall take a brief dive into the traditional problem and also solve a problem which is extension of it.
@@ -29,14 +28,14 @@ We shall take a brief dive into the traditional problem and also solve a problem
 
 <!-- toc -->
 
--   [Revisiting `(a==1 && a==2 && a==3)` (loose equality) problem](#revisiting-a1--a2--a3-loose-equality-problem)
-    -   [Problem `(a==1 && a==2 && a==3)`](#problem-a1--a2--a3)
-    -   [Explanation](#explanation)
--   [Problem `(a===1 && a===2 && a===3)` (strict comparison)](#problem-a1--a2--a3-strict-comparison)
-    -   [Explanation](#explanation-1)
-        -   [What are property descriptors?](#what-are-property-descriptors)
-
-*   [References](#references)
+  * [Revisiting `(a==1 && a==2 && a==3)` (loose equality) problem](#revisiting-a1--a2--a3-loose-equality-problem)
+    + [Problem `(a==1 && a==2 && a==3)`](#problem-a1--a2--a3)
+    + [Explanation](#explanation)
+  * [Problem `(a===1 && a===2 && a===3)` (strict comparison)](#problem-a1--a2--a3-strict-comparison)
+    + [Explanation](#explanation-1)
+      - [What are property descriptors?](#what-are-property-descriptors)
+- [Github Gist](#github-gist)
+- [References](#references)
 
 <!-- tocstop -->
 
@@ -200,3 +199,4 @@ If we define a property called `a` on some other object than `window`, say `obje
 -   [MDN web-docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
+
