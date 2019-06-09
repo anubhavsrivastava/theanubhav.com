@@ -33,7 +33,7 @@ Output -> [1, 10, 17, 2, 22, 45, 6, 9]
 <summary>Got it right?</summary>
 
 If you predicted the output as `[1, 2, 6, 9, 10, 17, 22, 45]` you need to go through the article to understand why the JS world didn't behave the way you expected it to be.
-If you got it right, you have command over the most common pitfall of `Array.prototype.sort` function!
+If you got it right, you have command over the most common pitfalls of `Array.prototype.sort` function!
 
 </details>
 
@@ -89,7 +89,7 @@ Simply, for example,
 
 -   compareFunction is optional. If not passed, JS default implementation for comparison is taken into consideration.
 
--   The array is sorted in place. This implies that original array would change to sorted on.
+-   The array is sorted in place. This implies that the original array would change to sorted on.
     Thus, sort() is "destructive" in nature.
 
 ### Understanding the `compareFunction`
