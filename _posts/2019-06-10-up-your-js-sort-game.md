@@ -248,3 +248,7 @@ numberArray.sort(function(a, b) {
 Simply reversing the conditions will sort the array in descending order.
 
 ---
+
+The above sorting behavior is for `Array.prototype.sort` function and does not guarantee performance/complexity gains. It would be better to opt for traditional performance sorting algorithms which can work on magnitudes of O(n log n) for particular dataset(array) under consideration.
+
+---
