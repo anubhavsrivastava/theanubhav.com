@@ -4,7 +4,8 @@ title: Make you JS - Array `sort` game strong!
 subtitle: Digging deeper into Array.prototype.sort function.
 avatar: /img/avatars/avatar-js.png
 gist: >-
-    We shall look into default array sort function in details and that one common pitfall!
+    We shall look into default array sort function in details and that one common
+    pitfall!
 categories:
     - JavaScript
     - JS
@@ -42,6 +43,20 @@ If you got it right, you have command over the most common pitfalls of `Array.pr
 ### Table of contents
 
 <!-- toc -->
+
+-   [What is Array.prototype.sort function?](#what-is-arrayprototypesort-function)
+-   [Syntax](#syntax)
+-   [Breaking down the syntax](#breaking-down-the-syntax)
+-   [Understanding the `compareFunction`](#understanding-the-comparefunction)
+    -   [**return** value of `compareFunction`](#return-value-of-comparefunction)
+-   [Implementations of `compareFunction`](#implementations-of-comparefunction)
+    -   [Sorting on strings](#sorting-on-strings)
+        -   [Case insensitive string sort](#case-insensitive-string-sort)
+        -   [Locale sensitive sorting](#locale-sensitive-sorting)
+    -   [Sorting on number](#sorting-on-number)
+        -   [Random order for an array](#random-order-for-an-array)
+    -   [Sorting on arbitrary Object](#sorting-on-arbitrary-object)
+    -   [Descending - Ascending sort order](#descending---ascending-sort-order)
 
 <!-- tocstop -->
 
