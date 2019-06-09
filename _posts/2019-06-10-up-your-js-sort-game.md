@@ -90,6 +90,7 @@ Simply, for example,
 -   compareFunction is optional. If not passed, JS default implementation for comparison is taken into consideration.
 
 -   The array is sorted in place. This implies that original array would change to sorted on.
+    Thus, sort() is "destructive" in nature.
 
 ### Understanding the `compareFunction`
 
@@ -120,19 +121,130 @@ The `compareFunction` if of signature (as mentioned above) - `compareFunction(fi
 
 ---
 
-Example sorting on object
-Example sorting on string
-Example sorting on numbers
+### Implementations of `compareFunction`
 
-Desc sorting vs reverse
+#### Sorting on strings
 
-Randomise array using sort function
-roblem and system scales well.
+Even if the default function works pretty well on string, you may need your custom compareFunction. The default comparison on string does not care about lowercase/uppercase. Uppercase string are lexicographically greater the lowercase.
+
+for eg,
+
+```javascript
+var stringArray = ['Blue', 'blue', 'Humpback', 'Beluga'];
+stringArray.sort();
+// ["Beluga", "Blue", "Humpback", "blue"]
+```
 
 ---
 
-When you decide to take on a technical debt, you had better make sure that your code stays squeaky clean. Keeping the system clean is the only way you will pay down that debt.
+##### Case insensitive string sort
+
+```javascript
+var stringArray = ['Blue', 'black', 'White', 'grey', 'Green', 'brown'];
+stringArray.sort(); //default sort logic
+// ["Blue", "Green", "White", "black", "brown", "grey"]
+
+// sorting with case insensitive
+stringArray.sort(function(a, b) {
+	var nameA = a.toUpperCase();
+	var nameB = b.toUpperCase();
+	if (nameA < nameB) {
+		return -1;
+	}
+	if (nameA > nameB) {
+		return 1;
+	}
+	return 0;
+});
+// ["black", "Blue", "brown", "Green", "grey", "White"]
+```
 
 ---
 
-Read the first part - [Don't delay your technical debts](/2019/03/10/dont-delay-technical-debts/)
+##### Locale sensitive sorting
+
+For sorting strings with non-ASCII characters, i.e. strings with accented characters (e, é, è, a, ä, etc.), strings from languages other than English, use String.localeCompare. This function can compare those characters so they appear in the right order.
+
+```javascript
+var stringArray = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+stringArray.sort(function(a, b) {
+	return a.localeCompare(b);
+});
+
+// items is ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
+```
+
+`String.prototype.localeCompare` compares string keeping lexicographical order in non-ASCII strings.
+
+#### Sorting on number
+
+As already discussed, default sort compare function converts elements under comparison to string, it is always a wrong choice for numbers. Even if your array is bound to contain only integers [0-9], it is always advisable to use number compare function. You can skip `toString` conversion time by writing number comparator
+
+```javascript
+var numberArray = [4, 2, 5, 1, 3];
+numberArray.sort(function(a, b) {
+	return a - b;
+});
+// [1, 2, 3, 4, 5]
+```
+
+This can be simple made smaller using ES6 arrow functions, `numbers.sort((a,b)=>a-b)`.
+
+---
+
+##### Random order for an array
+
+One can randomize array ordering using `Array.prototype.sort` function.
+
+Although, random ordering of an array can be done for other types, random ordered array for number seems to be more useful. Same logic can be applied for array that are not numbers.
+
+```javascript
+var numberArray = [4, 2, 5, 1, 3];
+numberArray.sort(function(a, b) {
+	return Math.round(Math.random()) ? 1 : -1;
+});
+```
+
+Above function will randomize the array. This can be tweaked a little to return '0' which will keep the element at original place. The above algorithm has higher odds of randomization for small array length.
+
+---
+
+#### Sorting on arbitrary Object
+
+On similar lines, `compareFunction` can be used to compare two objects.
+
+```javascript
+var objectArray = [{ name: 'Iron', rate: 21 }, { name: 'Copper', rate: 37 }, { name: 'Platinum', rate: 45 }, { name: 'Zinc', rate: -12 }, { name: 'Sulphur', rate: 13 }, { name: 'Silver', rate: 37 }];
+
+// sort by rate
+objectArray.sort(function(a, b) {
+	return a.rate - b.rate;
+});
+
+// sort by name
+objectArray.sort(function(a, b) {
+	return a.name.localeCompare(b.name);
+});
+```
+
+The compare function would depend on the schema of the object and sort criterion.
+
+#### Descending - Ascending sort order
+
+All the above example consider sorting in ascending order ,i.e, 1>2>3 or 'a'>'b'>'c'.
+
+A common non-performance way of sorting is using the sort compare and `Array.prototype.reverse` function in conjunction. Although it gives the desired result, it iterates over array twice.
+
+The correct way would be implementing the `compareFunction` in accordance to required sorting behavior. For example, descending sort for numeric array can be done as follows,
+
+```javascript
+var numberArray = [4, 2, 5, 1, 3];
+numberArray.sort(function(a, b) {
+	return b - a;
+});
+// [1, 2, 3, 4, 5]
+```
+
+Simply reversing the conditions will sort the array in descending order.
+
+---
